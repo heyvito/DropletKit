@@ -7,13 +7,179 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DACF51601C0042AD00F64F2D /* DropletKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF515F1C0042AD00F64F2D /* DropletKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF51751C00470900F64F2D /* NSMethodSignatureForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */; };
+		DACF51D51C004B1600F64F2D /* DKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51941C004B1600F64F2D /* DKClient.m */; };
+		DACF51D71C004B1600F64F2D /* DKErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51961C004B1600F64F2D /* DKErrorDomain.m */; };
+		DACF52121C004B1600F64F2D /* NSDate+NSDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51D21C004B1600F64F2D /* NSDate+NSDateUtils.m */; };
+		DACF52131C0058A400F64F2D /* PMKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF517F1C00477300F64F2D /* PMKPromise.m */; };
+		DACF52141C0058A400F64F2D /* PMKPromise+Hang.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51801C00477300F64F2D /* PMKPromise+Hang.m */; };
+		DACF52151C0058A400F64F2D /* PMKPromise+Join.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51811C00477300F64F2D /* PMKPromise+Join.m */; };
+		DACF52161C0058A400F64F2D /* PMKPromise+Pause.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51821C00477300F64F2D /* PMKPromise+Pause.m */; };
+		DACF52171C0058A400F64F2D /* PMKPromise+Until.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51831C00477300F64F2D /* PMKPromise+Until.m */; };
+		DACF52181C0058A400F64F2D /* PMKPromise+When.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51841C00477300F64F2D /* PMKPromise+When.m */; };
+		DACF52191C0058A400F64F2D /* PMKPromise+Zalgo.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51851C00477300F64F2D /* PMKPromise+Zalgo.m */; };
+		DACF521D1C00BCB600F64F2D /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF516C1C00470900F64F2D /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF521E1C00BCB600F64F2D /* Promise+Hang.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF516D1C00470900F64F2D /* Promise+Hang.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF521F1C00BCB600F64F2D /* Promise+Join.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF516E1C00470900F64F2D /* Promise+Join.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52201C00BCB600F64F2D /* Promise+Pause.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF516F1C00470900F64F2D /* Promise+Pause.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52211C00BCB600F64F2D /* Promise+Until.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51701C00470900F64F2D /* Promise+Until.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52221C00BCB600F64F2D /* Promise+When.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51711C00470900F64F2D /* Promise+When.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52231C00BCB600F64F2D /* Promise+Zalgo.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51721C00470900F64F2D /* Promise+Zalgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52241C00BCB600F64F2D /* Promise.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51731C00470900F64F2D /* Promise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52251C00BCB600F64F2D /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51741C00470900F64F2D /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52261C00BCBE00F64F2D /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51921C004B1600F64F2D /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52271C00BCBE00F64F2D /* DKClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51931C004B1600F64F2D /* DKClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52281C00BCBE00F64F2D /* DKErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51951C004B1600F64F2D /* DKErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52291C00BCBE00F64F2D /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51971C004B1600F64F2D /* Macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52481C00BCE300F64F2D /* NSDate+NSDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF51D11C004B1600F64F2D /* NSDate+NSDateUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52491C00BCE300F64F2D /* DropletKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF515F1C0042AD00F64F2D /* DropletKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF524C1C00BFE800F64F2D /* Models.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF524B1C00BFE800F64F2D /* Models.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF526E1C00C00200F64F2D /* DKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF524D1C00C00200F64F2D /* DKImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF526F1C00C00200F64F2D /* DKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF524E1C00C00200F64F2D /* DKImage.m */; };
+		DACF52701C00C00200F64F2D /* DKImageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF524F1C00C00200F64F2D /* DKImageCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52711C00C00200F64F2D /* DKImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52501C00C00200F64F2D /* DKImageCollection.m */; };
+		DACF52721C00C00200F64F2D /* DKIPv4Network.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52511C00C00200F64F2D /* DKIPv4Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52731C00C00200F64F2D /* DKIPv4Network.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52521C00C00200F64F2D /* DKIPv4Network.m */; };
+		DACF52741C00C00200F64F2D /* DKIPv6Network.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52531C00C00200F64F2D /* DKIPv6Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52751C00C00200F64F2D /* DKIPv6Network.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52541C00C00200F64F2D /* DKIPv6Network.m */; };
+		DACF52761C00C00200F64F2D /* DKKernel.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52551C00C00200F64F2D /* DKKernel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52771C00C00200F64F2D /* DKKernel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52561C00C00200F64F2D /* DKKernel.m */; };
+		DACF52781C00C00200F64F2D /* DKKernelCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52571C00C00200F64F2D /* DKKernelCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52791C00C00200F64F2D /* DKKernelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52581C00C00200F64F2D /* DKKernelCollection.m */; };
+		DACF527A1C00C00200F64F2D /* DKNetworkCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52591C00C00200F64F2D /* DKNetworkCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF527B1C00C00200F64F2D /* DKNetworkCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF525A1C00C00200F64F2D /* DKNetworkCollection.m */; };
+		DACF527C1C00C00200F64F2D /* DKNetworkModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF527D1C00C00200F64F2D /* DKRegion.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF525C1C00C00200F64F2D /* DKRegion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF527E1C00C00200F64F2D /* DKRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF525D1C00C00200F64F2D /* DKRegion.m */; };
+		DACF527F1C00C00200F64F2D /* DKRegionCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF525E1C00C00200F64F2D /* DKRegionCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52801C00C00200F64F2D /* DKRegionCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF525F1C00C00200F64F2D /* DKRegionCollection.m */; };
+		DACF52811C00C00200F64F2D /* DKSize.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52601C00C00200F64F2D /* DKSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52821C00C00200F64F2D /* DKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52611C00C00200F64F2D /* DKSize.m */; };
+		DACF52831C00C00200F64F2D /* DKSizeCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52621C00C00200F64F2D /* DKSizeCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52841C00C00200F64F2D /* DKSizeCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52631C00C00200F64F2D /* DKSizeCollection.m */; };
+		DACF52851C00C00200F64F2D /* DKSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52641C00C00200F64F2D /* DKSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52861C00C00200F64F2D /* DKSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52651C00C00200F64F2D /* DKSnapshot.m */; };
+		DACF52871C00C00200F64F2D /* DKSnapshotCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52661C00C00200F64F2D /* DKSnapshotCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52881C00C00200F64F2D /* DKSnapshotCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52671C00C00200F64F2D /* DKSnapshotCollection.m */; };
+		DACF52891C00C00200F64F2D /* DKSSHKey.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52681C00C00200F64F2D /* DKSSHKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF528A1C00C00200F64F2D /* DKSSHKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52691C00C00200F64F2D /* DKSSHKey.m */; };
+		DACF528B1C00C00200F64F2D /* DKSSHKeyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF526A1C00C00200F64F2D /* DKSSHKeyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF528C1C00C00200F64F2D /* DKSSHKeyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF526B1C00C00200F64F2D /* DKSSHKeyCollection.m */; };
+		DACF528D1C00C00200F64F2D /* DKUser.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF526C1C00C00200F64F2D /* DKUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF528E1C00C00200F64F2D /* DKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF526D1C00C00200F64F2D /* DKUser.m */; };
+		DACF529B1C00C00E00F64F2D /* DKDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF528F1C00C00E00F64F2D /* DKDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF529C1C00C00E00F64F2D /* DKDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52901C00C00E00F64F2D /* DKDomain.m */; };
+		DACF529D1C00C00E00F64F2D /* DKDomainCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52911C00C00E00F64F2D /* DKDomainCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF529E1C00C00E00F64F2D /* DKDomainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52921C00C00E00F64F2D /* DKDomainCollection.m */; };
+		DACF529F1C00C00E00F64F2D /* DKDomainRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52931C00C00E00F64F2D /* DKDomainRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52A01C00C00E00F64F2D /* DKDomainRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52941C00C00E00F64F2D /* DKDomainRecord.m */; };
+		DACF52A11C00C00E00F64F2D /* DKDomainRecordCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52951C00C00E00F64F2D /* DKDomainRecordCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52A21C00C00E00F64F2D /* DKDomainRecordCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52961C00C00E00F64F2D /* DKDomainRecordCollection.m */; };
+		DACF52A31C00C00E00F64F2D /* DKDroplet.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52971C00C00E00F64F2D /* DKDroplet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52A41C00C00E00F64F2D /* DKDroplet.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52981C00C00E00F64F2D /* DKDroplet.m */; };
+		DACF52A51C00C00E00F64F2D /* DKDropletCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52991C00C00E00F64F2D /* DKDropletCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52A61C00C00E00F64F2D /* DKDropletCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */; };
+		DACF52B21C00C02500F64F2D /* DKAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52A71C00C02500F64F2D /* DKAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52B31C00C02500F64F2D /* DKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52A81C00C02500F64F2D /* DKAction.m */; };
+		DACF52B41C00C02500F64F2D /* DKActionCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52A91C00C02500F64F2D /* DKActionCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52B51C00C02500F64F2D /* DKActionCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52AA1C00C02500F64F2D /* DKActionCollection.m */; };
+		DACF52B61C00C02500F64F2D /* DKBackupWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52AB1C00C02500F64F2D /* DKBackupWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52B71C00C02500F64F2D /* DKBackupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52AC1C00C02500F64F2D /* DKBackupWindow.m */; };
+		DACF52B81C00C02500F64F2D /* DKBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52AD1C00C02500F64F2D /* DKBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52B91C00C02500F64F2D /* DKBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52AE1C00C02500F64F2D /* DKBaseModel.m */; };
+		DACF52BA1C00C02500F64F2D /* DKBaseModelCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF52BB1C00C02500F64F2D /* DKBaseModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */; };
+		DACF52BC1C00C02500F64F2D /* DKChildProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DACF52B11C00C02500F64F2D /* DKChildProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACF537B1C00C9F000F64F2D /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACF537A1C00C9F000F64F2D /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DACF515C1C0042AD00F64F2D /* DropletKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropletKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF515F1C0042AD00F64F2D /* DropletKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropletKit.h; sourceTree = "<group>"; };
 		DACF51611C0042AD00F64F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMethodSignatureForBlock.m; sourceTree = "<group>"; };
+		DACF516C1C00470900F64F2D /* fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fwd.h; sourceTree = "<group>"; };
+		DACF516D1C00470900F64F2D /* Promise+Hang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+Hang.h"; sourceTree = "<group>"; };
+		DACF516E1C00470900F64F2D /* Promise+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+Join.h"; sourceTree = "<group>"; };
+		DACF516F1C00470900F64F2D /* Promise+Pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+Pause.h"; sourceTree = "<group>"; };
+		DACF51701C00470900F64F2D /* Promise+Until.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+Until.h"; sourceTree = "<group>"; };
+		DACF51711C00470900F64F2D /* Promise+When.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+When.h"; sourceTree = "<group>"; };
+		DACF51721C00470900F64F2D /* Promise+Zalgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Promise+Zalgo.h"; sourceTree = "<group>"; };
+		DACF51731C00470900F64F2D /* Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promise.h; sourceTree = "<group>"; };
+		DACF51741C00470900F64F2D /* PromiseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = DropletKit/Thirdparty/PromiseKit/PromiseKit.h; sourceTree = SOURCE_ROOT; };
+		DACF517F1C00477300F64F2D /* PMKPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMKPromise.m; sourceTree = "<group>"; };
+		DACF51801C00477300F64F2D /* PMKPromise+Hang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+Hang.m"; sourceTree = "<group>"; };
+		DACF51811C00477300F64F2D /* PMKPromise+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+Join.m"; sourceTree = "<group>"; };
+		DACF51821C00477300F64F2D /* PMKPromise+Pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+Pause.m"; sourceTree = "<group>"; };
+		DACF51831C00477300F64F2D /* PMKPromise+Until.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+Until.m"; sourceTree = "<group>"; };
+		DACF51841C00477300F64F2D /* PMKPromise+When.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+When.m"; sourceTree = "<group>"; };
+		DACF51851C00477300F64F2D /* PMKPromise+Zalgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PMKPromise+Zalgo.m"; sourceTree = "<group>"; };
+		DACF51921C004B1600F64F2D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DACF51931C004B1600F64F2D /* DKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKClient.h; sourceTree = "<group>"; };
+		DACF51941C004B1600F64F2D /* DKClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKClient.m; sourceTree = "<group>"; };
+		DACF51951C004B1600F64F2D /* DKErrorDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKErrorDomain.h; sourceTree = "<group>"; };
+		DACF51961C004B1600F64F2D /* DKErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKErrorDomain.m; sourceTree = "<group>"; };
+		DACF51971C004B1600F64F2D /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		DACF51D11C004B1600F64F2D /* NSDate+NSDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDateUtils.h"; sourceTree = "<group>"; };
+		DACF51D21C004B1600F64F2D /* NSDate+NSDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDateUtils.m"; sourceTree = "<group>"; };
+		DACF524B1C00BFE800F64F2D /* Models.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
+		DACF524D1C00C00200F64F2D /* DKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKImage.h; sourceTree = "<group>"; };
+		DACF524E1C00C00200F64F2D /* DKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKImage.m; sourceTree = "<group>"; };
+		DACF524F1C00C00200F64F2D /* DKImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKImageCollection.h; sourceTree = "<group>"; };
+		DACF52501C00C00200F64F2D /* DKImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKImageCollection.m; sourceTree = "<group>"; };
+		DACF52511C00C00200F64F2D /* DKIPv4Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKIPv4Network.h; sourceTree = "<group>"; };
+		DACF52521C00C00200F64F2D /* DKIPv4Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKIPv4Network.m; sourceTree = "<group>"; };
+		DACF52531C00C00200F64F2D /* DKIPv6Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKIPv6Network.h; sourceTree = "<group>"; };
+		DACF52541C00C00200F64F2D /* DKIPv6Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKIPv6Network.m; sourceTree = "<group>"; };
+		DACF52551C00C00200F64F2D /* DKKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKernel.h; sourceTree = "<group>"; };
+		DACF52561C00C00200F64F2D /* DKKernel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKernel.m; sourceTree = "<group>"; };
+		DACF52571C00C00200F64F2D /* DKKernelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKernelCollection.h; sourceTree = "<group>"; };
+		DACF52581C00C00200F64F2D /* DKKernelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKernelCollection.m; sourceTree = "<group>"; };
+		DACF52591C00C00200F64F2D /* DKNetworkCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNetworkCollection.h; sourceTree = "<group>"; };
+		DACF525A1C00C00200F64F2D /* DKNetworkCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNetworkCollection.m; sourceTree = "<group>"; };
+		DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNetworkModelProtocol.h; sourceTree = "<group>"; };
+		DACF525C1C00C00200F64F2D /* DKRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRegion.h; sourceTree = "<group>"; };
+		DACF525D1C00C00200F64F2D /* DKRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKRegion.m; sourceTree = "<group>"; };
+		DACF525E1C00C00200F64F2D /* DKRegionCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRegionCollection.h; sourceTree = "<group>"; };
+		DACF525F1C00C00200F64F2D /* DKRegionCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKRegionCollection.m; sourceTree = "<group>"; };
+		DACF52601C00C00200F64F2D /* DKSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSize.h; sourceTree = "<group>"; };
+		DACF52611C00C00200F64F2D /* DKSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSize.m; sourceTree = "<group>"; };
+		DACF52621C00C00200F64F2D /* DKSizeCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSizeCollection.h; sourceTree = "<group>"; };
+		DACF52631C00C00200F64F2D /* DKSizeCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSizeCollection.m; sourceTree = "<group>"; };
+		DACF52641C00C00200F64F2D /* DKSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSnapshot.h; sourceTree = "<group>"; };
+		DACF52651C00C00200F64F2D /* DKSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSnapshot.m; sourceTree = "<group>"; };
+		DACF52661C00C00200F64F2D /* DKSnapshotCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSnapshotCollection.h; sourceTree = "<group>"; };
+		DACF52671C00C00200F64F2D /* DKSnapshotCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSnapshotCollection.m; sourceTree = "<group>"; };
+		DACF52681C00C00200F64F2D /* DKSSHKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSSHKey.h; sourceTree = "<group>"; };
+		DACF52691C00C00200F64F2D /* DKSSHKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSSHKey.m; sourceTree = "<group>"; };
+		DACF526A1C00C00200F64F2D /* DKSSHKeyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSSHKeyCollection.h; sourceTree = "<group>"; };
+		DACF526B1C00C00200F64F2D /* DKSSHKeyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSSHKeyCollection.m; sourceTree = "<group>"; };
+		DACF526C1C00C00200F64F2D /* DKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKUser.h; sourceTree = "<group>"; };
+		DACF526D1C00C00200F64F2D /* DKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKUser.m; sourceTree = "<group>"; };
+		DACF528F1C00C00E00F64F2D /* DKDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDomain.h; sourceTree = "<group>"; };
+		DACF52901C00C00E00F64F2D /* DKDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDomain.m; sourceTree = "<group>"; };
+		DACF52911C00C00E00F64F2D /* DKDomainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDomainCollection.h; sourceTree = "<group>"; };
+		DACF52921C00C00E00F64F2D /* DKDomainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDomainCollection.m; sourceTree = "<group>"; };
+		DACF52931C00C00E00F64F2D /* DKDomainRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDomainRecord.h; sourceTree = "<group>"; };
+		DACF52941C00C00E00F64F2D /* DKDomainRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDomainRecord.m; sourceTree = "<group>"; };
+		DACF52951C00C00E00F64F2D /* DKDomainRecordCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDomainRecordCollection.h; sourceTree = "<group>"; };
+		DACF52961C00C00E00F64F2D /* DKDomainRecordCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDomainRecordCollection.m; sourceTree = "<group>"; };
+		DACF52971C00C00E00F64F2D /* DKDroplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDroplet.h; sourceTree = "<group>"; };
+		DACF52981C00C00E00F64F2D /* DKDroplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDroplet.m; sourceTree = "<group>"; };
+		DACF52991C00C00E00F64F2D /* DKDropletCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDropletCollection.h; sourceTree = "<group>"; };
+		DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDropletCollection.m; sourceTree = "<group>"; };
+		DACF52A71C00C02500F64F2D /* DKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAction.h; sourceTree = "<group>"; };
+		DACF52A81C00C02500F64F2D /* DKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAction.m; sourceTree = "<group>"; };
+		DACF52A91C00C02500F64F2D /* DKActionCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActionCollection.h; sourceTree = "<group>"; };
+		DACF52AA1C00C02500F64F2D /* DKActionCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActionCollection.m; sourceTree = "<group>"; };
+		DACF52AB1C00C02500F64F2D /* DKBackupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBackupWindow.h; sourceTree = "<group>"; };
+		DACF52AC1C00C02500F64F2D /* DKBackupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBackupWindow.m; sourceTree = "<group>"; };
+		DACF52AD1C00C02500F64F2D /* DKBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBaseModel.h; sourceTree = "<group>"; };
+		DACF52AE1C00C02500F64F2D /* DKBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBaseModel.m; sourceTree = "<group>"; };
+		DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBaseModelCollection.h; sourceTree = "<group>"; };
+		DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBaseModelCollection.m; sourceTree = "<group>"; };
+		DACF52B11C00C02500F64F2D /* DKChildProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKChildProtocol.h; sourceTree = "<group>"; };
+		DACF537A1C00C9F000F64F2D /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF537B1C00C9F000F64F2D /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +197,7 @@
 		DACF51521C0042AD00F64F2D = {
 			isa = PBXGroup;
 			children = (
+				DACF537A1C00C9F000F64F2D /* AFNetworking.framework */,
 				DACF515E1C0042AD00F64F2D /* DropletKit */,
 				DACF515D1C0042AD00F64F2D /* Products */,
 			);
@@ -46,10 +214,140 @@
 		DACF515E1C0042AD00F64F2D /* DropletKit */ = {
 			isa = PBXGroup;
 			children = (
+				DACF51671C0046E400F64F2D /* Thirdparty */,
+				DACF51911C004AD800F64F2D /* Source */,
 				DACF515F1C0042AD00F64F2D /* DropletKit.h */,
 				DACF51611C0042AD00F64F2D /* Info.plist */,
 			);
 			path = DropletKit;
+			sourceTree = "<group>";
+		};
+		DACF51671C0046E400F64F2D /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				DACF51681C0046ED00F64F2D /* PromiseKit */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		DACF51681C0046ED00F64F2D /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				DACF517F1C00477300F64F2D /* PMKPromise.m */,
+				DACF51801C00477300F64F2D /* PMKPromise+Hang.m */,
+				DACF51811C00477300F64F2D /* PMKPromise+Join.m */,
+				DACF51821C00477300F64F2D /* PMKPromise+Pause.m */,
+				DACF51831C00477300F64F2D /* PMKPromise+Until.m */,
+				DACF51841C00477300F64F2D /* PMKPromise+When.m */,
+				DACF51851C00477300F64F2D /* PMKPromise+Zalgo.m */,
+				DACF51691C00470900F64F2D /* Private */,
+				DACF516B1C00470900F64F2D /* PromiseKit */,
+				DACF51741C00470900F64F2D /* PromiseKit.h */,
+			);
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		DACF51691C00470900F64F2D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		DACF516B1C00470900F64F2D /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				DACF516C1C00470900F64F2D /* fwd.h */,
+				DACF516D1C00470900F64F2D /* Promise+Hang.h */,
+				DACF516E1C00470900F64F2D /* Promise+Join.h */,
+				DACF516F1C00470900F64F2D /* Promise+Pause.h */,
+				DACF51701C00470900F64F2D /* Promise+Until.h */,
+				DACF51711C00470900F64F2D /* Promise+When.h */,
+				DACF51721C00470900F64F2D /* Promise+Zalgo.h */,
+				DACF51731C00470900F64F2D /* Promise.h */,
+			);
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		DACF51911C004AD800F64F2D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DACF524A1C00BFAA00F64F2D /* Models */,
+				DACF51921C004B1600F64F2D /* Constants.h */,
+				DACF51931C004B1600F64F2D /* DKClient.h */,
+				DACF51941C004B1600F64F2D /* DKClient.m */,
+				DACF51951C004B1600F64F2D /* DKErrorDomain.h */,
+				DACF51961C004B1600F64F2D /* DKErrorDomain.m */,
+				DACF51971C004B1600F64F2D /* Macros.h */,
+				DACF51D11C004B1600F64F2D /* NSDate+NSDateUtils.h */,
+				DACF51D21C004B1600F64F2D /* NSDate+NSDateUtils.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		DACF524A1C00BFAA00F64F2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DACF52A71C00C02500F64F2D /* DKAction.h */,
+				DACF52A81C00C02500F64F2D /* DKAction.m */,
+				DACF52A91C00C02500F64F2D /* DKActionCollection.h */,
+				DACF52AA1C00C02500F64F2D /* DKActionCollection.m */,
+				DACF52AB1C00C02500F64F2D /* DKBackupWindow.h */,
+				DACF52AC1C00C02500F64F2D /* DKBackupWindow.m */,
+				DACF52AD1C00C02500F64F2D /* DKBaseModel.h */,
+				DACF52AE1C00C02500F64F2D /* DKBaseModel.m */,
+				DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */,
+				DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */,
+				DACF52B11C00C02500F64F2D /* DKChildProtocol.h */,
+				DACF524B1C00BFE800F64F2D /* Models.h */,
+				DACF524D1C00C00200F64F2D /* DKImage.h */,
+				DACF524E1C00C00200F64F2D /* DKImage.m */,
+				DACF524F1C00C00200F64F2D /* DKImageCollection.h */,
+				DACF52501C00C00200F64F2D /* DKImageCollection.m */,
+				DACF52511C00C00200F64F2D /* DKIPv4Network.h */,
+				DACF52521C00C00200F64F2D /* DKIPv4Network.m */,
+				DACF52531C00C00200F64F2D /* DKIPv6Network.h */,
+				DACF52541C00C00200F64F2D /* DKIPv6Network.m */,
+				DACF52551C00C00200F64F2D /* DKKernel.h */,
+				DACF52561C00C00200F64F2D /* DKKernel.m */,
+				DACF52571C00C00200F64F2D /* DKKernelCollection.h */,
+				DACF52581C00C00200F64F2D /* DKKernelCollection.m */,
+				DACF52591C00C00200F64F2D /* DKNetworkCollection.h */,
+				DACF525A1C00C00200F64F2D /* DKNetworkCollection.m */,
+				DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */,
+				DACF525C1C00C00200F64F2D /* DKRegion.h */,
+				DACF525D1C00C00200F64F2D /* DKRegion.m */,
+				DACF525E1C00C00200F64F2D /* DKRegionCollection.h */,
+				DACF525F1C00C00200F64F2D /* DKRegionCollection.m */,
+				DACF52601C00C00200F64F2D /* DKSize.h */,
+				DACF52611C00C00200F64F2D /* DKSize.m */,
+				DACF52621C00C00200F64F2D /* DKSizeCollection.h */,
+				DACF52631C00C00200F64F2D /* DKSizeCollection.m */,
+				DACF52641C00C00200F64F2D /* DKSnapshot.h */,
+				DACF52651C00C00200F64F2D /* DKSnapshot.m */,
+				DACF52661C00C00200F64F2D /* DKSnapshotCollection.h */,
+				DACF52671C00C00200F64F2D /* DKSnapshotCollection.m */,
+				DACF52681C00C00200F64F2D /* DKSSHKey.h */,
+				DACF52691C00C00200F64F2D /* DKSSHKey.m */,
+				DACF526A1C00C00200F64F2D /* DKSSHKeyCollection.h */,
+				DACF526B1C00C00200F64F2D /* DKSSHKeyCollection.m */,
+				DACF526C1C00C00200F64F2D /* DKUser.h */,
+				DACF526D1C00C00200F64F2D /* DKUser.m */,
+				DACF528F1C00C00E00F64F2D /* DKDomain.h */,
+				DACF52901C00C00E00F64F2D /* DKDomain.m */,
+				DACF52911C00C00E00F64F2D /* DKDomainCollection.h */,
+				DACF52921C00C00E00F64F2D /* DKDomainCollection.m */,
+				DACF52931C00C00E00F64F2D /* DKDomainRecord.h */,
+				DACF52941C00C00E00F64F2D /* DKDomainRecord.m */,
+				DACF52951C00C00E00F64F2D /* DKDomainRecordCollection.h */,
+				DACF52961C00C00E00F64F2D /* DKDomainRecordCollection.m */,
+				DACF52971C00C00E00F64F2D /* DKDroplet.h */,
+				DACF52981C00C00E00F64F2D /* DKDroplet.m */,
+				DACF52991C00C00E00F64F2D /* DKDropletCollection.h */,
+				DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +357,51 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DACF51601C0042AD00F64F2D /* DropletKit.h in Headers */,
+				DACF52481C00BCE300F64F2D /* NSDate+NSDateUtils.h in Headers */,
+				DACF52491C00BCE300F64F2D /* DropletKit.h in Headers */,
+				DACF52851C00C00200F64F2D /* DKSnapshot.h in Headers */,
+				DACF52871C00C00200F64F2D /* DKSnapshotCollection.h in Headers */,
+				DACF526E1C00C00200F64F2D /* DKImage.h in Headers */,
+				DACF52831C00C00200F64F2D /* DKSizeCollection.h in Headers */,
+				DACF52B21C00C02500F64F2D /* DKAction.h in Headers */,
+				DACF52B41C00C02500F64F2D /* DKActionCollection.h in Headers */,
+				DACF52A31C00C00E00F64F2D /* DKDroplet.h in Headers */,
+				DACF52761C00C00200F64F2D /* DKKernel.h in Headers */,
+				DACF52B81C00C02500F64F2D /* DKBaseModel.h in Headers */,
+				DACF52A11C00C00E00F64F2D /* DKDomainRecordCollection.h in Headers */,
+				DACF524C1C00BFE800F64F2D /* Models.h in Headers */,
+				DACF52721C00C00200F64F2D /* DKIPv4Network.h in Headers */,
+				DACF527A1C00C00200F64F2D /* DKNetworkCollection.h in Headers */,
+				DACF52BA1C00C02500F64F2D /* DKBaseModelCollection.h in Headers */,
+				DACF527C1C00C00200F64F2D /* DKNetworkModelProtocol.h in Headers */,
+				DACF52A51C00C00E00F64F2D /* DKDropletCollection.h in Headers */,
+				DACF52891C00C00200F64F2D /* DKSSHKey.h in Headers */,
+				DACF528D1C00C00200F64F2D /* DKUser.h in Headers */,
+				DACF52741C00C00200F64F2D /* DKIPv6Network.h in Headers */,
+				DACF52781C00C00200F64F2D /* DKKernelCollection.h in Headers */,
+				DACF52701C00C00200F64F2D /* DKImageCollection.h in Headers */,
+				DACF52B61C00C02500F64F2D /* DKBackupWindow.h in Headers */,
+				DACF527D1C00C00200F64F2D /* DKRegion.h in Headers */,
+				DACF528B1C00C00200F64F2D /* DKSSHKeyCollection.h in Headers */,
+				DACF52251C00BCB600F64F2D /* PromiseKit.h in Headers */,
+				DACF529B1C00C00E00F64F2D /* DKDomain.h in Headers */,
+				DACF529F1C00C00E00F64F2D /* DKDomainRecord.h in Headers */,
+				DACF52811C00C00200F64F2D /* DKSize.h in Headers */,
+				DACF52BC1C00C02500F64F2D /* DKChildProtocol.h in Headers */,
+				DACF529D1C00C00E00F64F2D /* DKDomainCollection.h in Headers */,
+				DACF527F1C00C00200F64F2D /* DKRegionCollection.h in Headers */,
+				DACF52261C00BCBE00F64F2D /* Constants.h in Headers */,
+				DACF52271C00BCBE00F64F2D /* DKClient.h in Headers */,
+				DACF52281C00BCBE00F64F2D /* DKErrorDomain.h in Headers */,
+				DACF52291C00BCBE00F64F2D /* Macros.h in Headers */,
+				DACF521D1C00BCB600F64F2D /* fwd.h in Headers */,
+				DACF521E1C00BCB600F64F2D /* Promise+Hang.h in Headers */,
+				DACF521F1C00BCB600F64F2D /* Promise+Join.h in Headers */,
+				DACF52201C00BCB600F64F2D /* Promise+Pause.h in Headers */,
+				DACF52211C00BCB600F64F2D /* Promise+Until.h in Headers */,
+				DACF52221C00BCB600F64F2D /* Promise+When.h in Headers */,
+				DACF52231C00BCB600F64F2D /* Promise+Zalgo.h in Headers */,
+				DACF52241C00BCB600F64F2D /* Promise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +472,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF52131C0058A400F64F2D /* PMKPromise.m in Sources */,
+				DACF52841C00C00200F64F2D /* DKSizeCollection.m in Sources */,
+				DACF52751C00C00200F64F2D /* DKIPv6Network.m in Sources */,
+				DACF52A01C00C00E00F64F2D /* DKDomainRecord.m in Sources */,
+				DACF52141C0058A400F64F2D /* PMKPromise+Hang.m in Sources */,
+				DACF52A21C00C00E00F64F2D /* DKDomainRecordCollection.m in Sources */,
+				DACF52B31C00C02500F64F2D /* DKAction.m in Sources */,
+				DACF527B1C00C00200F64F2D /* DKNetworkCollection.m in Sources */,
+				DACF52151C0058A400F64F2D /* PMKPromise+Join.m in Sources */,
+				DACF529E1C00C00E00F64F2D /* DKDomainCollection.m in Sources */,
+				DACF52161C0058A400F64F2D /* PMKPromise+Pause.m in Sources */,
+				DACF52771C00C00200F64F2D /* DKKernel.m in Sources */,
+				DACF52171C0058A400F64F2D /* PMKPromise+Until.m in Sources */,
+				DACF52181C0058A400F64F2D /* PMKPromise+When.m in Sources */,
+				DACF527E1C00C00200F64F2D /* DKRegion.m in Sources */,
+				DACF526F1C00C00200F64F2D /* DKImage.m in Sources */,
+				DACF52A41C00C00E00F64F2D /* DKDroplet.m in Sources */,
+				DACF52BB1C00C02500F64F2D /* DKBaseModelCollection.m in Sources */,
+				DACF52191C0058A400F64F2D /* PMKPromise+Zalgo.m in Sources */,
+				DACF528C1C00C00200F64F2D /* DKSSHKeyCollection.m in Sources */,
+				DACF52731C00C00200F64F2D /* DKIPv4Network.m in Sources */,
+				DACF52711C00C00200F64F2D /* DKImageCollection.m in Sources */,
+				DACF528E1C00C00200F64F2D /* DKUser.m in Sources */,
+				DACF52801C00C00200F64F2D /* DKRegionCollection.m in Sources */,
+				DACF52121C004B1600F64F2D /* NSDate+NSDateUtils.m in Sources */,
+				DACF52B51C00C02500F64F2D /* DKActionCollection.m in Sources */,
+				DACF52B91C00C02500F64F2D /* DKBaseModel.m in Sources */,
+				DACF51D51C004B1600F64F2D /* DKClient.m in Sources */,
+				DACF52A61C00C00E00F64F2D /* DKDropletCollection.m in Sources */,
+				DACF52791C00C00200F64F2D /* DKKernelCollection.m in Sources */,
+				DACF52861C00C00200F64F2D /* DKSnapshot.m in Sources */,
+				DACF52881C00C00200F64F2D /* DKSnapshotCollection.m in Sources */,
+				DACF51751C00470900F64F2D /* NSMethodSignatureForBlock.m in Sources */,
+				DACF529C1C00C00E00F64F2D /* DKDomain.m in Sources */,
+				DACF52B71C00C02500F64F2D /* DKBackupWindow.m in Sources */,
+				DACF51D71C004B1600F64F2D /* DKErrorDomain.m in Sources */,
+				DACF528A1C00C00200F64F2D /* DKSSHKey.m in Sources */,
+				DACF52821C00C00200F64F2D /* DKSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +611,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECTDIR)",
+					"$(PROJECTDIR)/Thirdparty/**",
+					"$(PROJECTDIR)/Models",
+				);
 				INFOPLIST_FILE = DropletKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.hexic.DropletKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -247,8 +637,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECTDIR)",
+					"$(PROJECTDIR)/Thirdparty/**",
+					"$(PROJECTDIR)/Models",
+				);
 				INFOPLIST_FILE = DropletKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.hexic.DropletKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +675,7 @@
 				DACF51661C0042AD00F64F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

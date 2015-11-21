@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DropletKit.xcscheme_^#shared#^_</key>
+		<key>DKSpecs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DACF515B1C0042AD00F64F2D</key>
+		<key>DACF53911C00CB3800F64F2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DACF53AA1C00CB3900F64F2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
