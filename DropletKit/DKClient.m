@@ -14,7 +14,14 @@
 @implementation DKClient {
     __block AFHTTPSessionManager *manager;
     __block AFHTTPRequestSerializer *serializer;
+    NSNumber *_rateLimitLimit;
+    NSNumber *_rateLimitRemaining;
+    NSDate *_rateLimitReset;
 }
+
+@synthesize rateLimitReset = _rateLimitReset;
+@synthesize requestsLeft = _rateLimitRemaining;
+@synthesize requestsPerHour = _rateLimitLimit;
 
 #pragma mark Properties
 + (void)setAuthenticationToken:(NSString *)token {
@@ -80,6 +87,23 @@
     return [self apiURLForEndpoint:[array componentsJoinedByString:@"/"]];
 }
 
+- (void)updateRateLimitWithTask:(NSURLSessionTask *)task {
+    NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+    NSDictionary *headers = [response allHeaderFields];
+    NSNumber *limit = [headers valueForKey:@"ratelimit-limit"];
+    NSNumber *remaining = [headers valueForKey:@"ratelimit-remaining"];
+    NSNumber *reset = [headers valueForKey:@"ratelimit-reset"];
+    if(limit) {
+        _rateLimitLimit = limit;
+    }
+    if(remaining) {
+        _rateLimitRemaining = remaining;
+    }
+    if(reset) {
+        _rateLimitReset = [NSDate dateWithTimeIntervalSince1970:[reset longValue]];
+    }
+}
+
 
 #pragma mark Dynamic item request
 - (PMKPromise *)requestForItemWithType:(Class)type andFullURL:(NSString *)url {
@@ -87,6 +111,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] GET:url parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
                 return;
@@ -110,6 +135,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] GET:url parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
                 return;
@@ -149,6 +175,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] DELETE:url parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             if(((NSHTTPURLResponse*)operation.response).statusCode == 204) {
                 fulfill([NSNull null]);
             } else {
@@ -167,6 +194,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] POST:url parameters:data success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             fulfill(responseObject);
         } failure:^(NSURLSessionTask *operation, NSError *error) {
             reject(error);
@@ -181,6 +209,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] PUT:url parameters:data success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             fulfill(responseObject);
         } failure:^(NSURLSessionTask *operation, NSError *error) {
             reject(error);
@@ -201,6 +230,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[strongSelf sharedSessionManager] POST:url parameters:dict success:^(NSURLSessionTask *operation, id responseObject) {
+            [strongSelf updateRateLimitWithTask:operation];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
                 return;
