@@ -17,11 +17,11 @@
     if([[data allKeys] containsObject:@"action"]) {
         data = [data objectForKey:@"action"];
     }
-    if(!CHECK_DATA_CONTAINS(id, status, type, started_at, completed_at, resource_id, resource_type, region, region_slug)) {
+    if(!CHECK_DATA_CONTAINS(id, status, type, started_at, completed_at, resource_id, resource_type, region_slug)) {
         self = nil;
     } else {
         // Common Items
-        CALL_MACRO_X_FOR_EACH(EXPAND_DATA, status, type, region)
+        CALL_MACRO_X_FOR_EACH(EXPAND_DATA, status, type)
         // Renamed items
         EXPAND_DATA_LOCAL(id, actionId);
         EXPAND_DATA_LOCAL(resource_id, resourceId)

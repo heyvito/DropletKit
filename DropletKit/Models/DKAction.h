@@ -13,7 +13,6 @@
 #pragma mark Common properties
 @property NSString *status;
 @property NSString *type;
-@property NSString *region;
 
 #pragma mark Renamed properties
 @property NSNumber *actionId;
