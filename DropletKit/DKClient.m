@@ -66,14 +66,12 @@
 - (NSString *)apiURLForEndpointWithComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     if(firstComponent) {
-        NSLog(@"FirstComponent: %@", firstComponent);
         [array addObject:firstComponent];
         va_list args;
         va_start(args, firstComponent);
 
         id arg = nil;
         while((arg = va_arg(args, id))) {
-            NSLog(@"Component: %@", arg);
             [array addObject:arg];
         }
         va_end(args);
