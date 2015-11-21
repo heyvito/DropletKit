@@ -347,8 +347,28 @@
             reject(error);
         });
     }];
+}
 
-
+- (PMKPromise *)createSSHKeyWithName:(NSString *)name andContents:(NSString *)contents {
+    NSString *url = [self apiURLForEndpointWithComponents:@"account", @"keys", nil];
+    NSDictionary *data = @{
+                           @"name": name,
+                           @"public_key": contents
+                           };
+    __weak __typeof__(self) weakSelf = self;
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        __strong __typeof__(self) strongSelf = weakSelf;
+        [strongSelf requestCreateForURL:url withData:data].then(^(id result) {
+            if([result isKindOfClass:[NSDictionary class]]) {
+                DKSSHKey *key = [[DKSSHKey alloc] initWithDictionary:result];
+                fulfill(key);
+            } else {
+                reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
+            }
+        }).catch(^(id error) {
+            reject(error);
+        });
+    }];
 }
 
 @end

@@ -311,4 +311,17 @@
  *  @warning Parameter type for `then` is `DKDomain *`
  */
 - (PMKPromise *)createDomainWithName:(NSString *)name andIPAddress:(NSString *)ip;
+
+
+/**
+ *  Creates a new SSH Key for the authenticated user.
+ *
+ *  @param name     The name to give the new SSH key in the user's account.
+ *  @param contents A string containing the entire public key.
+ *
+ *  @return  *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKSSHKey *`
+ */
+- (PMKPromise *)createSSHKeyWithName:(NSString *)name andContents:(NSString *)contents;
 @end
