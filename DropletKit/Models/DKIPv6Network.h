@@ -10,5 +10,9 @@
 #import "DKNetworkModelProtocol.h"
 
 @interface DKIPv6Network : DKBaseModel <DKNetworkModelProtocol>
+
+/**
+ *  Netmask for this IPv6 Network
+ */
 @property NSNumber *netmask;
 @end

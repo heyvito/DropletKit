@@ -11,10 +11,24 @@
 @interface DKKernel : DKBaseModel
 
 #pragma mark Common properties
+
+/**
+ *  The display name of the kernel. This is shown in the web UI
+ *  and is generally a descriptive title for the kernel in question.
+ */
 @property NSString *name;
+
+/**
+ *  A standard kernel version string representing the version, patch,
+ *  and release information.
+ */
 @property NSString *version;
 
 #pragma mark Renamed properties
+
+/**
+ *  A unique number used to identify and reference a specific kernel.
+ */
 @property NSNumber *kernelId;
 
 @end

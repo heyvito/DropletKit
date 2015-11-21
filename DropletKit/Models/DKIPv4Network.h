@@ -10,5 +10,10 @@
 #import "DKNetworkModelProtocol.h"
 
 @interface DKIPv4Network : DKBaseModel <DKNetworkModelProtocol>
+
+/**
+ *  Netmask for this IPv4 Network
+ */
 @property NSString *netmask;
+
 @end
