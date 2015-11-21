@@ -132,7 +132,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImage *`
+ *  @warning Parameter type for `then` is `DKAction *`
  */
 - (PMKPromise *)getActionById:(NSNumber *)actionId;
 
