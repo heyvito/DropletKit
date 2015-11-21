@@ -271,4 +271,60 @@
     return [self requestForCollectionOf:@"sizes" andType:[DKSizeCollection class]];
 }
 
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 enablePrivateNetworking:(BOOL)enablePrivNet {
+    NSString *url = [self apiURLForEndpoint:@"droplets"];
+    NSDictionary *data = @{
+        @"name": name,
+        @"image": image.imageId,
+        @"region": region.slug,
+        @"size": size.slug,
+        @"backups": @(backups),
+        @"ipv6": @(ipv6),
+        @"private_networking": @(enablePrivNet)
+        };
+    if(keys) {
+        NSMutableArray *result = [[NSMutableArray alloc] init];
+        for(id i in keys) {
+            if([i isKindOfClass:[DKSSHKey class]]) {
+                [result addObject:((DKSSHKey *)i).sshKeyId];
+            } else if([i isKindOfClass:[NSString class]]) {
+                [result addObject:i];
+            }
+        }
+        if(result.count > 0) {
+            [data setValue:result forKey:@"ssh_keys"];
+        }
+    }
+    __weak __typeof__(self) weakSelf = self;
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        __strong __typeof__(self) strongSelf = weakSelf;
+        [strongSelf requestCreateForURL:url withData:data].then(^(id result) {
+            if([result isKindOfClass:[NSDictionary class]]) {
+                DKDroplet *droplet = [[DKDroplet alloc] initWithDictionary:result];
+                fulfill(droplet);
+            } else {
+                reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
+            }
+        }).catch(^(id error) {
+            reject(error);
+        });
+    }];
+}
+
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 {
+    return [self createDropletWithName:name image:image andSize:size onRegion:region withSSHKeys:keys enableBackups:backups enableIPv6:ipv6 enablePrivateNetworking:NO];
+}
+
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups {
+    return [self createDropletWithName:name image:image andSize:size onRegion:region withSSHKeys:keys enableBackups:backups enableIPv6:NO];
+}
+
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys {
+    return [self createDropletWithName:name image:image andSize:size onRegion:region withSSHKeys:keys enableBackups:NO];
+}
+
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region {
+    return [self createDropletWithName:name image:image andSize:size onRegion:region withSSHKeys:nil];
+}
+
 @end

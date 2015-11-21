@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class AFHTTPSessionManager, PMKPromise;
+@class AFHTTPSessionManager, PMKPromise, DKRegion, DKSize, DKImage;
 
 @interface DKClient : NSObject
 
@@ -185,4 +185,116 @@
  *  @warning Parameter type for `then` is `DKSizeCollection *`
  */
 - (PMKPromise *)getSizes;
+
+/**
+ *  Creates a new Droplet for the Authenticated user
+ *
+ *  @param name   The human-readable string you wish to use when displaying
+ *                the Droplet name. The name, if set to a domain name managed
+ *                in the DigitalOcean DNS management system, will configure a
+ *                PTR record for the Droplet. The name set during creation will
+ *                also determine the hostname for the Droplet in its internal
+ *                configuration.
+ *  @param image  The DKImage to base the new droplet.
+ *  @param size   DKSize instance that you wish to select for this Droplet.
+ *  @param region DKRegion instance of the region that you wish to deploy in.
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDroplet *`
+ */
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region;
+
+/**
+ *  Creates a new Droplet for the Authenticated user
+ *
+ *  @param name   The human-readable string you wish to use when displaying
+ *                the Droplet name. The name, if set to a domain name managed
+ *                in the DigitalOcean DNS management system, will configure a
+ *                PTR record for the Droplet. The name set during creation will
+ *                also determine the hostname for the Droplet in its internal
+ *                configuration.
+ *  @param image  The DKImage to base the new droplet.
+ *  @param size   DKSize instance that you wish to select for this Droplet.
+ *  @param region DKRegion instance of the region that you wish to deploy in.
+ *  @param keys   NSArray containing DKSSHKeys or SSH Key's Fingerprints.
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDroplet *`
+ */
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys;
+
+/**
+ *  Creates a new Droplet for the Authenticated user
+ *
+ *  @param name    The human-readable string you wish to use when displaying
+ *                 the Droplet name. The name, if set to a domain name managed
+ *                 in the DigitalOcean DNS management system, will configure a
+ *                 PTR record for the Droplet. The name set during creation will
+ *                 also determine the hostname for the Droplet in its internal
+ *                 configuration.
+ *  @param image   The DKImage to base the new droplet.
+ *  @param size    DKSize instance that you wish to select for this Droplet.
+ *  @param region  DKRegion instance of the region that you wish to deploy in.
+ *  @param keys    NSArray containing DKSSHKeys or SSH Key's Fingerprints.
+ *  @param backups A boolean indicating whether automated backups should be enabled
+ *                 for the Droplet. Automated backups can only be enabled when the
+ *                 Droplet is created.
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDroplet *`
+ */
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups;
+
+/**
+ *  Creates a new Droplet for the Authenticated user
+ *
+ *  @param name    The human-readable string you wish to use when displaying
+ *                 the Droplet name. The name, if set to a domain name managed
+ *                 in the DigitalOcean DNS management system, will configure a
+ *                 PTR record for the Droplet. The name set during creation will
+ *                 also determine the hostname for the Droplet in its internal
+ *                 configuration.
+ *  @param image   The DKImage to base the new droplet.
+ *  @param size    DKSize instance that you wish to select for this Droplet.
+ *  @param region  DKRegion instance of the region that you wish to deploy in.
+ *  @param keys    NSArray containing DKSSHKeys or SSH Key's Fingerprints.
+ *  @param backups A boolean indicating whether automated backups should be enabled
+ *                 for the Droplet. Automated backups can only be enabled when the
+ *                 Droplet is created.
+ *  @param ipv6    A boolean indicating whether IPv6 is enabled on the Droplet.
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDroplet *`
+ */
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6;
+
+/**
+ *  Creates a new Droplet for the Authenticated user
+ *
+ *  @param name          The human-readable string you wish to use when displaying
+ *                       the Droplet name. The name, if set to a domain name managed
+ *                       in the DigitalOcean DNS management system, will configure a
+ *                       PTR record for the Droplet. The name set during creation will
+ *                       also determine the hostname for the Droplet in its internal
+ *                       configuration.
+ *  @param image         The DKImage to base the new droplet.
+ *  @param size          DKSize instance that you wish to select for this Droplet.
+ *  @param region        DKRegion instance of the region that you wish to deploy in.
+ *  @param keys          NSArray containing DKSSHKeys or SSH Key's Fingerprints.
+ *  @param backups       A boolean indicating whether automated backups should be enabled
+ *                       for the Droplet. Automated backups can only be enabled when the
+ *                       Droplet is created.
+ *  @param ipv6          A boolean indicating whether IPv6 is enabled on the Droplet.
+ *  @param enablePrivNet A boolean indicating whether private networking is enabled
+ *                       for the Droplet. Private networking is currently only available in certain regions.
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDroplet *`
+ */
+- (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 enablePrivateNetworking:(BOOL)enablePrivNet;
 @end
