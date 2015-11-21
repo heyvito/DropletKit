@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Victor Gama. All rights reserved.
 //
 
-//#define DisableRemoteTests
+#define DisableRemoteTests
 
 #import <XCTest/XCTest.h>
 #import <DropletKit/DropletKit.h>
@@ -19,8 +19,7 @@
 
 - (void)setUp {
     [super setUp];
-//    [DKClient setAuthenticationToken:@"YOUR DO TOKEN HERE"];
-    [DKClient setAuthenticationToken:@"3b7bff2397d42d35baf68bbc2471a066b865f4962e1ce9fbd1a8ac428cd1dbff"];
+    [DKClient setAuthenticationToken:@"YOUR DO TOKEN HERE"];
 }
 
 - (void)tearDown {
