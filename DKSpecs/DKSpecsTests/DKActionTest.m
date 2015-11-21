@@ -28,7 +28,6 @@
     XCTAssert([action.completedAt isEqual:completed], @"completedAt is not sane");
     XCTAssert([action.resourceId isEqual:@3164444], @"resourceId is not sane");
     XCTAssert([action.resourceType isEqual:@"droplet"], @"resourceType is not sane");
-    XCTAssert([action.region isEqual:@"nyc3"], @"region is not sane");
     XCTAssert([action.regionSlug isEqual:@"nyc3"], @"regionSlug is not sane");
 }
 
