@@ -64,7 +64,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
         [[[DKClient sharedInstance] sharedSessionManager] GET:nextPage parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
-            id instance = [[[strongSelf class] alloc] initWithJsonData:responseObject];
+            id instance = [[[strongSelf class] alloc] initWithDictionary:responseObject];
             if(!instance) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             } else {

@@ -50,7 +50,7 @@
         DKClient *instance = [DKClient sharedInstance];
         NSDictionary *data = @{ @"name": imageName };
         [[instance sharedSessionManager] PUT:[instance apiURLForEndpointWithComponents:@"images", strongSelf.imageId, nil] parameters:data success:^(NSURLSessionTask *operation, id responseObject) {
-            DKImage *image = [[DKImage alloc] initWithJSON:responseObject];
+            DKImage *image = [[DKImage alloc] initWithDictionary:responseObject];
             if(image) {
                 fulfill(image);
             } else {

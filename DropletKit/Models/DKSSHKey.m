@@ -41,7 +41,7 @@
         DKClient *instance = [DKClient sharedInstance];
         NSDictionary *data = @{ @"name": name };
         [[instance sharedSessionManager] PUT:[instance apiURLForEndpointWithComponents:@"account", @"keys", strongSelf.fingerprint, nil] parameters:data success:^(NSURLSessionTask *operation, id responseObject) {
-            DKSSHKey *key = [[DKSSHKey alloc] initWithJSON:responseObject];
+            DKSSHKey *key = [[DKSSHKey alloc] initWithDictionary:responseObject];
             if(key) {
                 fulfill(key);
             } else {
