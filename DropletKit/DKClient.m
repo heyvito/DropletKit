@@ -327,4 +327,28 @@
     return [self createDropletWithName:name image:image andSize:size onRegion:region withSSHKeys:nil];
 }
 
+- (PMKPromise *)createDomainWithName:(NSString *)name andIPAddress:(NSString *)ip {
+    NSString *url = [self apiURLForEndpoint:@"domains"];
+    NSDictionary *data = @{
+                           @"name": name,
+                           @"ip_address": ip
+                           };
+    __weak __typeof__(self) weakSelf = self;
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        __strong __typeof__(self) strongSelf = weakSelf;
+        [strongSelf requestCreateForURL:url withData:data].then(^(id result) {
+            if([result isKindOfClass:[NSDictionary class]]) {
+                DKDomain *domain = [[DKDomain alloc] initWithDictionary:result];
+                fulfill(domain);
+            } else {
+                reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
+            }
+        }).catch(^(id error) {
+            reject(error);
+        });
+    }];
+
+
+}
+
 @end

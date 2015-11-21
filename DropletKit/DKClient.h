@@ -297,4 +297,18 @@
  *  @warning Parameter type for `then` is `DKDroplet *`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 enablePrivateNetworking:(BOOL)enablePrivNet;
+
+/**
+ *  Creates a new Domain for the authenticated user.
+ *
+ *  @param name The domain name to add to the DigitalOcean DNS management interface.
+ *              The name must be unique in DigitalOcean's DNS system. The operation
+ *              will fail if the name has already been taken.
+ *  @param ip   The IP address you want the domain to point
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKDomain *`
+ */
+- (PMKPromise *)createDomainWithName:(NSString *)name andIPAddress:(NSString *)ip;
 @end
