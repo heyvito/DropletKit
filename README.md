@@ -28,7 +28,6 @@ Now you are ready to perform requests to DigitalOcean's Endpoints:
 
 ## TODO
  * Implement Floating IP support.
- * Automatically fill ratelimit-related properties.
 
 ## License
 
