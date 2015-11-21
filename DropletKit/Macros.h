@@ -16,6 +16,7 @@
 #define EXPAND_DATA_DATE(name) self.name = [[NSDate RFC3339DateFormatter] dateFromString:[data objectForKey:@#name]];
 #define EXPAND_DICT(dict, name) self.name = [dict objectForKey:@#name];
 #define EXPAND_DICT_LOCAL(dict, name, local) self.local = [dict objectForKey:@#name];
+#define EXPAND_DICT_LOCAL_BOOL(dict, name, local) self.local = [[dict objectForKey:@#name] boolValue];
 
 #define CHECK_DATA_CONTAINS(...) [DKBaseModel checkData:data contains:@#__VA_ARGS__]
 

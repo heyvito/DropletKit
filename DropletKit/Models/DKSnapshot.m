@@ -19,7 +19,7 @@
     } else {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, name, distribution, slug, regions, type)
         EXPAND_DATA_LOCAL(id, snapshotId)
-        EXPAND_DATA_LOCAL(public, isPublic)
+        EXPAND_DICT_LOCAL_BOOL(data, public, isPublic)
         EXPAND_DATA_LOCAL(min_disk_size, minDiskSize)
         EXPAND_DATA_DATE_LOCAL(created_at, createdAt)
     }

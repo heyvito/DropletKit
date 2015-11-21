@@ -27,7 +27,6 @@ Now you are ready to perform requests to DigitalOcean's Endpoints:
 ```
 
 ## TODO
- * Write docs (in progress)
  * Implement Floating IP support.
  * Automatically fill ratelimit-related properties.
  * Implement methods to create new Domains, Droplets, and SSH Keys.

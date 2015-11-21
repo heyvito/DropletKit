@@ -22,7 +22,7 @@
     } else {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, email, uuid)
         EXPAND_DICT_LOCAL(data, droplet_limit, dropletLimit)
-        EXPAND_DICT_LOCAL(data, email_verified, emailVerified)
+        EXPAND_DICT_LOCAL_BOOL(data, email_verified, emailVerified)
     }
     return self;
 }
