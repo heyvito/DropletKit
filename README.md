@@ -1,5 +1,11 @@
 # DropletKit
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+<p align="center">
+    <img alt="Platform" src="https://img.shields.io/badge/platform-iOS%208%2B-yellow.svg?style=flat" />
+    <img alt="Language" src="https://img.shields.io/badge/language-ObjC-blue.svg?style=flat" />
+    <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" ></a>
+    <img alt="Version" src="https://img.shields.io/github/tag/victorgama/dropletkit.svg?color=green&style=flat" />
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" />
+</p>
 
 **DropletKit** is a Objective-C wrapper for the [DigitalOcean API](https://developers.digitalocean.com).
 
