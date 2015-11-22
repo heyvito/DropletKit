@@ -26,6 +26,7 @@
     #import "DKSSHKey.h"
     #import "DKBackupWindow.h"
     #import "DKSnapshot.h"
+    #import "DKOAuthResponse.h"
 
     #import "DKActionCollection.h"
     #import "DKDomainCollection.h"

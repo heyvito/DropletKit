@@ -399,4 +399,31 @@
     }];
 }
 
+- (NSString *)getOAuthAuthorizationURLWithApplicationKey:(NSString *)key RedirectURI:(NSString *)uri andWriteScope:(BOOL)write {
+    return [NSString stringWithFormat:@"https://cloud.digitalocean.com/v1/oauth/authorize?client_id=%@&redirect_uri=%@&response_type=code&scope=read%@", key, uri, write ? @"+write" : @""];
+}
+
+- (PMKPromise *)exchangeOAuthCode:(NSString *)code withRedirectURI:(NSString *)uri applicationKey:(NSString *)key andSecret:(NSString *)secret {
+    NSDictionary *data = @{
+                           @"client_id": key,
+                           @"client_secret": secret,
+                           @"code": code,
+                           @"grant_type": @"authorization_code",
+                           @"redirect_uri": uri
+                           };
+    __weak __typeof__(self) weakSelf = self;
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        __strong __typeof__(self) strongSelf = weakSelf;
+        [strongSelf requestCreateForURL:@"https://cloud.digitalocean.com/v1/oauth/token" withData:data].then(^(id result) {
+            if([result isKindOfClass:[NSDictionary class]]) {
+                DKOAuthResponse *response = [[DKOAuthResponse alloc] initWithDictionary:result];
+                fulfill(response);
+            } else {
+                reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
+            }
+        }).catch(^(id error) {
+            reject(error);
+        });
+    }];
+}
 @end

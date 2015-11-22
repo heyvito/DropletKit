@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA52612F1C014FCD003E077C /* DKOAuthResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DA52612D1C014FCD003E077C /* DKOAuthResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA5261301C014FCD003E077C /* DKOAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA52612E1C014FCD003E077C /* DKOAuthResponse.m */; };
 		DACF51751C00470900F64F2D /* NSMethodSignatureForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */; };
 		DACF51D51C004B1600F64F2D /* DKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51941C004B1600F64F2D /* DKClient.m */; };
 		DACF51D71C004B1600F64F2D /* DKErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51961C004B1600F64F2D /* DKErrorDomain.m */; };
@@ -94,6 +96,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA52612D1C014FCD003E077C /* DKOAuthResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKOAuthResponse.h; sourceTree = "<group>"; };
+		DA52612E1C014FCD003E077C /* DKOAuthResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKOAuthResponse.m; sourceTree = "<group>"; };
 		DACF515C1C0042AD00F64F2D /* DropletKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropletKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF515F1C0042AD00F64F2D /* DropletKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropletKit.h; sourceTree = "<group>"; };
 		DACF51611C0042AD00F64F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 				DACF52981C00C00E00F64F2D /* DKDroplet.m */,
 				DACF52991C00C00E00F64F2D /* DKDropletCollection.h */,
 				DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */,
+				DA52612D1C014FCD003E077C /* DKOAuthResponse.h */,
+				DA52612E1C014FCD003E077C /* DKOAuthResponse.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				DACF52871C00C00200F64F2D /* DKSnapshotCollection.h in Headers */,
 				DACF526E1C00C00200F64F2D /* DKImage.h in Headers */,
 				DACF52831C00C00200F64F2D /* DKSizeCollection.h in Headers */,
+				DA52612F1C014FCD003E077C /* DKOAuthResponse.h in Headers */,
 				DACF52B21C00C02500F64F2D /* DKAction.h in Headers */,
 				DACF52B41C00C02500F64F2D /* DKActionCollection.h in Headers */,
 				DACF52A31C00C00E00F64F2D /* DKDroplet.h in Headers */,
@@ -484,6 +491,7 @@
 				DACF529E1C00C00E00F64F2D /* DKDomainCollection.m in Sources */,
 				DACF52161C0058A400F64F2D /* PMKPromise+Pause.m in Sources */,
 				DACF52771C00C00200F64F2D /* DKKernel.m in Sources */,
+				DA5261301C014FCD003E077C /* DKOAuthResponse.m in Sources */,
 				DACF52171C0058A400F64F2D /* PMKPromise+Until.m in Sources */,
 				DACF52181C0058A400F64F2D /* PMKPromise+When.m in Sources */,
 				DACF527E1C00C00200F64F2D /* DKRegion.m in Sources */,

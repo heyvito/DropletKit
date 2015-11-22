@@ -319,9 +319,35 @@
  *  @param name     The name to give the new SSH key in the user's account.
  *  @param contents A string containing the entire public key.
  *
- *  @return  *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKSSHKey *`
  */
 - (PMKPromise *)createSSHKeyWithName:(NSString *)name andContents:(NSString *)contents;
+
+/**
+ *  Gets an OAuth Authorization URL to request an User access to their account.
+ *
+ *  @param key   Your application key, obtained when you registered it with DigitalOcean
+ *  @param uri   Redirect URI to redirect the user after they allow access to their account
+ *  @param write Whether you need Write permission to their account or not
+ *
+ *  @return An URL poiting to the authorization endpoint
+ */
+- (NSString *)getOAuthAuthorizationURLWithApplicationKey:(NSString *)key RedirectURI:(NSString *)uri andWriteScope:(BOOL)write;
+
+
+/**
+ *  Exchanges a authorization code with an access token
+ *
+ *  @param code   Token obtained when the user was redirected back to your application
+ *  @param uri    Redirect URI used when requesting access to the user's account
+ *  @param key    Your application key, obtained when you registered it with DigitalOcean
+ *  @param secret Your application secret, obtained when you registered it with DigitalOcean
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKOAuthResponse *`
+ */
+- (PMKPromise *)exchangeOAuthCode:(NSString *)code withRedirectURI:(NSString *)uri applicationKey:(NSString *)key andSecret:(NSString *)secret;
 @end
