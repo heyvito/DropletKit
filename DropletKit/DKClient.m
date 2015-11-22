@@ -90,17 +90,17 @@
 - (void)updateRateLimitWithTask:(NSURLSessionTask *)task {
     NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
     NSDictionary *headers = [response allHeaderFields];
-    NSNumber *limit = [headers valueForKey:@"ratelimit-limit"];
-    NSNumber *remaining = [headers valueForKey:@"ratelimit-remaining"];
-    NSNumber *reset = [headers valueForKey:@"ratelimit-reset"];
+    NSString *limit = [headers valueForKey:@"ratelimit-limit"];
+    NSString *remaining = [headers valueForKey:@"ratelimit-remaining"];
+    NSString *reset = [headers valueForKey:@"ratelimit-reset"];
     if(limit) {
-        _rateLimitLimit = limit;
+        _rateLimitLimit = [NSNumber numberWithInteger:[limit integerValue]];
     }
     if(remaining) {
-        _rateLimitRemaining = remaining;
+        _rateLimitRemaining = [NSNumber numberWithInteger:[remaining integerValue]];
     }
     if(reset) {
-        _rateLimitReset = [NSDate dateWithTimeIntervalSince1970:[reset longValue]];
+        _rateLimitReset = [NSDate dateWithTimeIntervalSince1970:[reset integerValue]];
     }
 }
 
