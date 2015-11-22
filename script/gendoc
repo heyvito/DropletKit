@@ -1,0 +1,15 @@
+#!/bin/bash
+
+appledoc \
+--project-name DropletKit \
+--project-company "Victor Gama" \
+--company-id "io.vito" \
+--output Docs \
+--keep-intermediate-files \
+--no-repeat-first-par \
+--no-warn-invalid-crossref \
+--exit-threshold 2 \
+--ignore .m \
+--ignore DropletKit/Thirdparty \
+--search-undocumented-doc \
+DropletKit
