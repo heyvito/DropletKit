@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKSize`s
+ */
 @interface DKSizeCollection : DKBaseModelCollection
 
 @end

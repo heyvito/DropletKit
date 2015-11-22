@@ -33,14 +33,14 @@
 @property (readonly) NSNumber *requestsPerHour;
 
 /**
- *  Automatically updated, indicates how many requests your authenticationToken
+ *  Automatically updated, indicates how many requests your `authenticationToken`
  *  can still issue.
  */
 @property (readonly) NSNumber *requestsLeft;
 
 /**
  *  Automatically updated, indicates when the rate limit for the current
- *  authenticationToken will be reset.
+ *  `authenticationToken` will be reset.
  */
 @property (readonly) NSDate *rateLimitReset;
 
@@ -77,7 +77,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKUser *`.
+ *  @warning Parameter type for `then` is `DKUser`.
  */
 - (PMKPromise *)getAccountInfo;
 
@@ -87,7 +87,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDropletCollection *`
+ *  @warning Parameter type for `then` is `DKDropletCollection`
  */
 - (PMKPromise *)getDroplets;
 
@@ -97,7 +97,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKActionCollection *`
+ *  @warning Parameter type for `then` is `DKActionCollection`
  */
 - (PMKPromise *)getActions;
 
@@ -108,7 +108,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)getActionWithId:(NSNumber *)actionId;
 
@@ -117,7 +117,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDomainCollection *`
+ *  @warning Parameter type for `then` is `DKDomainCollection`
  */
 - (PMKPromise *)getDomains;
 
@@ -132,7 +132,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImageCollection *`
+ *  @warning Parameter type for `then` is `DKImageCollection`
  */
 - (PMKPromise *)getImages;
 
@@ -142,7 +142,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImageCollection *`
+ *  @warning Parameter type for `then` is `DKImageCollection`
  */
 - (PMKPromise *)getDistributionImages;
 
@@ -152,7 +152,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImageCollection *`
+ *  @warning Parameter type for `then` is `DKImageCollection`
  */
 - (PMKPromise *)getApplicationImages;
 
@@ -162,7 +162,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImageCollection *`
+ *  @warning Parameter type for `then` is `DKImageCollection`
  */
 - (PMKPromise *)getUserImages;
 
@@ -171,7 +171,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKSSHKeyCollection *`
+ *  @warning Parameter type for `then` is `DKSSHKeyCollection`
  */
 - (PMKPromise *)getSSHKeys;
 
@@ -181,7 +181,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKRegionCollection *`
+ *  @warning Parameter type for `then` is `DKRegionCollection`
  */
 - (PMKPromise *)getRegions;
 
@@ -190,7 +190,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKSizeCollection *`
+ *  @warning Parameter type for `then` is `DKSizeCollection`
  */
 - (PMKPromise *)getSizes;
 
@@ -209,7 +209,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDroplet *`
+ *  @warning Parameter type for `then` is `DKDroplet`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region;
 
@@ -229,7 +229,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDroplet *`
+ *  @warning Parameter type for `then` is `DKDroplet`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys;
 
@@ -252,7 +252,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDroplet *`
+ *  @warning Parameter type for `then` is `DKDroplet`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups;
 
@@ -276,7 +276,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDroplet *`
+ *  @warning Parameter type for `then` is `DKDroplet`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6;
 
@@ -302,7 +302,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDroplet *`
+ *  @warning Parameter type for `then` is `DKDroplet`
  */
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 enablePrivateNetworking:(BOOL)enablePrivNet;
 
@@ -316,7 +316,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDomain *`
+ *  @warning Parameter type for `then` is `DKDomain`
  */
 - (PMKPromise *)createDomainWithName:(NSString *)name andIPAddress:(NSString *)ip;
 
@@ -329,7 +329,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKSSHKey *`
+ *  @warning Parameter type for `then` is `DKSSHKey`
  */
 - (PMKPromise *)createSSHKeyWithName:(NSString *)name andContents:(NSString *)contents;
 
@@ -355,7 +355,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKOAuthResponse *`
+ *  @warning Parameter type for `then` is `DKOAuthResponse`
  */
 - (PMKPromise *)exchangeOAuthCode:(NSString *)code withRedirectURI:(NSString *)uri applicationKey:(NSString *)key andSecret:(NSString *)secret;
 
@@ -368,7 +368,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKOAuthResponse *`
+ *  @warning Parameter type for `then` is `DKOAuthResponse`
  */
 - (PMKPromise *)exchangeRefreshToken:(NSString *)token usingApplicationKey:(NSString *)key andSecret:(NSString *)secret;
 @end

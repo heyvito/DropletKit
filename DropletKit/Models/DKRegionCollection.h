@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKRegion`s
+ */
 @interface DKRegionCollection : DKBaseModelCollection
 
 @end

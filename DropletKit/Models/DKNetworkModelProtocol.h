@@ -8,9 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ *  Represents a Network model
+ */
 @protocol DKNetworkModelProtocol <NSObject>
 @required
+
+/**
+ *  IP address for this network
+ */
 @property NSString *ipAddress;
+
+/**
+ *  Gateway for this network
+ */
 @property NSString *gateway;
+
+/**
+ *  Network type
+ */
 @property NSString *type;
 @end

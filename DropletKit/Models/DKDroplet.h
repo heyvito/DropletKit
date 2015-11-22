@@ -10,6 +10,7 @@
 
 @class DKKernel, DKImage, DKSize, DKRegion, DKBackupWindow, DKNetworkCollection, PMKPromise;
 
+
 /**
  *  A Droplet is a DigitalOcean virtual machine.
  */
@@ -131,7 +132,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKKernelCollection *`
+ *  @warning Parameter type for `then` is `DKKernelCollection`
  */
 - (PMKPromise *)getAvailableKernels;
 
@@ -140,7 +141,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKSnapshotCollection *`
+ *  @warning Parameter type for `then` is `DKSnapshotCollection`
  */
 - (PMKPromise *)getSnapshots;
 
@@ -149,7 +150,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKBackupCollection *`
+ *  @warning Parameter type for `then` is `DKBackupCollection`
  */
 - (PMKPromise *)getBackups;
 
@@ -158,7 +159,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKActionCollection *`
+ *  @warning Parameter type for `then` is `DKActionCollection`
  */
 - (PMKPromise *)getActions;
 
@@ -167,7 +168,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDropletCollection *`
+ *  @warning Parameter type for `then` is `DKDropletCollection`
  */
 - (PMKPromise *)getNeighbors;
 
@@ -187,7 +188,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)disableBackups;
 
@@ -197,7 +198,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)reboot;
 
@@ -208,7 +209,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)powerCycle;
 
@@ -219,7 +220,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)shutdown;
 
@@ -229,7 +230,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)powerOff;
 
@@ -238,7 +239,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)powerOn;
 
@@ -250,7 +251,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)restoreWithImage:(DKImage *)image;
 
@@ -261,7 +262,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)restoreWithImageId:(NSNumber *)imageId;
 
@@ -272,7 +273,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)restoreWithImageSlug:(NSString *)imageSlug;
 
@@ -282,7 +283,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)resetPassword;
 
@@ -294,7 +295,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)resizeWithSize:(DKSize *)size andResizeDisks:(BOOL)resizeDisks;
 
@@ -305,7 +306,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)rebuildWithImage:(DKImage *)image;
 
@@ -316,7 +317,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)rebuildWithImageId:(NSNumber *)imageId;
 
@@ -327,7 +328,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)rebuildWithImageSlug:(NSString *)imageSlug;
 
@@ -339,7 +340,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)renameTo:(NSString *)name;
 
@@ -350,7 +351,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)changeKernelTo:(DKKernel *)kernel;
 
@@ -359,7 +360,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)enableIPv6;
 
@@ -368,7 +369,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)enablePrivateNetworking;
 
@@ -377,7 +378,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)createSnapshot;
 
@@ -386,7 +387,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)upgrade;
 
@@ -397,7 +398,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)getAction:(NSNumber *)actionId;
 

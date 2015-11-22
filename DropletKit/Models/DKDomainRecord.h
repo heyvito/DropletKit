@@ -86,7 +86,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDomainRecord *`
+ *  @warning Parameter type for `then` is `DKDomainRecord`
  */
 - (PMKPromise *)updateRecordSetType:(DKDomainRecordType)updateType setName:(NSString *)updateName setData:(NSString *)updateData setPriority:(NSInteger)updatePriority setPort:(NSInteger)updatePort setWeight:(NSInteger)updateWeight;
 

@@ -8,6 +8,7 @@
 
 #import "DKBaseModel.h"
 #import "Constants.h"
+
 @class PMKPromise;
 
 
@@ -53,7 +54,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDomain *`
+ *  @warning Parameter type for `then` is `DKDomain`
  */
 - (PMKPromise *)domainRecords;
 
@@ -83,7 +84,7 @@
  *
  *  @return  A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKDomainRecord *`
+ *  @warning Parameter type for `then` is `DKDomainRecord`
  */
 - (PMKPromise *)createRecordWithType:(DKDomainRecordType)type andName:(NSString *)recordName andData:(NSString *)data andPriority:(NSInteger)priority andPort:(NSInteger)port andWeight:(NSInteger)weight;
 

@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKImage`s
+ */
 @interface DKImageCollection : DKBaseModelCollection
 
 @end

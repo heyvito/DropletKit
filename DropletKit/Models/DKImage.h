@@ -85,7 +85,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKActionCollection *`
+ *  @warning Parameter type for `then` is `DKActionCollection`
  */
 - (PMKPromise *)getActions;
 
@@ -98,7 +98,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKImage *`
+ *  @warning Parameter type for `then` is `DKImage`
  */
 - (PMKPromise *)renameImageTo:(NSString *)imageName;
 
@@ -119,7 +119,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)transferToRegion:(DKRegion *)region;
 
@@ -128,7 +128,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)convertToSnapshot;
 
@@ -139,7 +139,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `DKAction *`
+ *  @warning Parameter type for `then` is `DKAction`
  */
 - (PMKPromise *)getActionById:(NSNumber *)actionId;
 

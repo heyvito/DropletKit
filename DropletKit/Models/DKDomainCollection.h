@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKDomain`s
+ */
 @interface DKDomainCollection : DKBaseModelCollection
 
 @end

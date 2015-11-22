@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKSnapshot`s
+ */
 @interface DKSnapshotCollection : DKBaseModelCollection
 
 @end

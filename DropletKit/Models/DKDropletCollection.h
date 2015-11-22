@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKDroplet`s
+ */
 @interface DKDropletCollection : DKBaseModelCollection
 
 @end

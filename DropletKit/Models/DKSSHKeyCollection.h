@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKSSHKey`s
+ */
 @interface DKSSHKeyCollection : DKBaseModelCollection
 
 @end

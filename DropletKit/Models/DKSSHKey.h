@@ -58,7 +58,7 @@
  *
  *  @return A `PMKPromise` that will be fulfilled whenever the requests
  *          succeeds or fails.
- *  @warning Parameter type for `then` is `SKSSHKey *`
+ *  @warning Parameter type for `then` is `DKSSHKey`
  */
 - (PMKPromise *)renameTo:(NSString *)name;
 

@@ -8,6 +8,10 @@
 
 #import "DKBaseModelCollection.h"
 
+
+/**
+ *  Represents a collection of `DKAction`s
+ */
 @interface DKActionCollection : DKBaseModelCollection
 
 @end

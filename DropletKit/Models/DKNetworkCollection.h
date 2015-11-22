@@ -8,6 +8,11 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  Represents a collection of networks, containing
+ *  information about IPv4 and IPv6 networks.
+ */
 @interface DKNetworkCollection : DKBaseModel
 
 /**
