@@ -1,4 +1,4 @@
-# ![Logo](https://dl.dropboxusercontent.com/u/8015936/dklogo.png)
+# ![Logo](http://dropletkit.vito.io/img/dklogo.png)
 <p align="center">
     <img alt="Platform" src="https://img.shields.io/badge/platform-iOS%208%2B-yellow.svg?style=flat" />
     <img alt="Language" src="https://img.shields.io/badge/language-ObjC-blue.svg?style=flat" />
@@ -7,7 +7,7 @@
     <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" />
 </p>
 
-**DropletKit** is a Objective-C wrapper for the [DigitalOcean API](https://developers.digitalocean.com).
+**DropletKit** is a Objective-C wrapper for the [DigitalOcean API](https://developers.digitalocean.com). More documentation can be found [here](http://dropletkit.vito.io).
 
 ## Usage
 
