@@ -10,6 +10,9 @@
 
 @class DKKernel, DKImage, DKSize, DKRegion, DKBackupWindow, DKNetworkCollection, PMKPromise;
 
+/**
+ *  A Droplet is a DigitalOcean virtual machine.
+ */
 @interface DKDroplet : DKBaseModel
 
 #pragma mark Common properties

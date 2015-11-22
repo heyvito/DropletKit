@@ -10,6 +10,12 @@
 #import "Constants.h"
 @class PMKPromise;
 
+
+/**
+ *  Domain resources are domain names that the user
+ *  have purchased from a domain name registrar that
+ *  they can manage through the DigitalOcean DNS interface.
+ */
 @interface DKDomain : DKBaseModel
 
 #pragma mark Common properties

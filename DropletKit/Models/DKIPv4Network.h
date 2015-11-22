@@ -9,6 +9,9 @@
 #import "DKBaseModel.h"
 #import "DKNetworkModelProtocol.h"
 
+/**
+ *  Represents metadata for a given IPv4 Network
+ */
 @interface DKIPv4Network : DKBaseModel <DKNetworkModelProtocol>
 
 /**

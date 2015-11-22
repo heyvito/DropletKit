@@ -8,6 +8,15 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  Actions are records of events that have occurred on the resources in the user's account. 
+ *  These can be things like rebooting a Droplet, or transferring an image to a new region.
+ *
+ *  An action object is created every time one of these actions is initiated. The action
+ *  object contains information about the current status of the action, start and complete
+ *  timestamps, and the associated resource type and ID.
+ */
 @interface DKAction : DKBaseModel
 
 #pragma mark Common properties

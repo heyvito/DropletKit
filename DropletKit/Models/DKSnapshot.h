@@ -8,6 +8,12 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  A snapshot holds the state of a given Droplet in a given
+ *  point of time. This snapshot can be used to base new Droplets
+ *  or restore them to this previous state.
+ */
 @interface DKSnapshot : DKBaseModel
 
 #pragma mark Common properties

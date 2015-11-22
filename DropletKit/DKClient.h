@@ -10,6 +10,15 @@
 
 @class AFHTTPSessionManager, PMKPromise, DKRegion, DKSize, DKImage;
 
+
+/**
+   Base class for DropletKit. All operation is made through this instance.
+   This is a singleton-based class. To access its methods:
+
+        [[DKClient sharedInstance] method];
+
+   @warning `setAuthenticationToken` is a class method, and is not available through `sharedInstance`.
+ */
 @interface DKClient : NSObject
 
 /**
@@ -34,7 +43,6 @@
  *  authenticationToken will be reset.
  */
 @property (readonly) NSDate *rateLimitReset;
-@property NSDictionary *requestHeaders;
 
 /**
  *  Sets the access token used by the application to perform requests on

@@ -6,7 +6,6 @@
 //  Copyright © 2015 Hexic Labs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 //#import >Thirdparty/PromiseKit/PromiseKit.h>
 

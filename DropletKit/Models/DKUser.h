@@ -8,6 +8,10 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  Represents a User in the DigitalOcean infrastructure
+ */
 @interface DKUser : DKBaseModel
 
 #pragma mark Common properties

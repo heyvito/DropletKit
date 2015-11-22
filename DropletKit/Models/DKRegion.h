@@ -8,6 +8,14 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  A region in DigitalOcean represents a datacenter where Droplets can be
+ *  deployed and images can be transferred.
+ *  Each region represents a specific datacenter in a geographic location.
+ *  Some geographical locations may have multiple "regions" available. This
+ *  means that there are multiple datacenters available within that area.
+ */
 @interface DKRegion : DKBaseModel
 
 #pragma mark Common properties

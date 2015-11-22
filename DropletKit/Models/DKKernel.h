@@ -8,6 +8,11 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  Represents a Kernel version on the DigitalOcean infrastructure.
+ *  Each kernel comes with a a name, version, patch and release information
+ */
 @interface DKKernel : DKBaseModel
 
 #pragma mark Common properties

@@ -8,6 +8,11 @@
 
 #import "DKBaseModel.h"
 
+
+/**
+ *  Includes start and end dates of the next backup window
+ *  for a given Droplet.
+ */
 @interface DKBackupWindow : DKBaseModel
 #pragma mark Extended properties
 

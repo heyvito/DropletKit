@@ -10,6 +10,13 @@
 
 @class PMKPromise;
 
+
+/**
+ *  DigitalOcean allows users to add SSH public keys to the interface so
+ *  that they can embed their public key into a Droplet at the time of
+ *  creation. 
+ *  Only the public key is required to take advantage of this functionality.
+ */
 @interface DKSSHKey : DKBaseModel
 
 #pragma mark Common properties

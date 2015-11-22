@@ -10,6 +10,13 @@
 
 @class DKRegion, PMKPromise;
 
+
+/**
+ *  An image may refer to a snapshot that has been taken of a Droplet instance.
+ *  It may also mean an image representing an automatic backup of a Droplet. The
+ *  third category that it can represent is a public Linux distribution or 
+ *  application image that is used as a base to create Droplets.
+ */
 @interface DKImage : DKBaseModel
 
 #pragma mark Common properties

@@ -12,6 +12,14 @@
 
 @class DKDomain, PMKPromise;
 
+
+/**
+ *  Domain record resources are used to set or retrieve
+ *  information about the individual DNS records configured
+ *  for a domain. This allows the user to build and manage
+ *  DNS zone files by adding and modifying individual records
+ *  for a domain.
+ */
 @interface DKDomainRecord : DKBaseModel <DKChildProtocol>
 
 #pragma mark Common properties
