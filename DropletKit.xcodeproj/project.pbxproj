@@ -183,7 +183,7 @@
 		DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBaseModelCollection.h; sourceTree = "<group>"; };
 		DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBaseModelCollection.m; sourceTree = "<group>"; };
 		DACF52B11C00C02500F64F2D /* DKChildProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKChildProtocol.h; sourceTree = "<group>"; };
-		DACF537A1C00C9F000F64F2D /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		DACF537A1C00C9F000F64F2D /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ../../Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +201,6 @@
 		DACF51521C0042AD00F64F2D = {
 			isa = PBXGroup;
 			children = (
-				DACF537A1C00C9F000F64F2D /* AFNetworking.framework */,
 				DACF515E1C0042AD00F64F2D /* DropletKit */,
 				DACF515D1C0042AD00F64F2D /* Products */,
 			);
@@ -229,6 +228,7 @@
 		DACF51671C0046E400F64F2D /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				DACF537A1C00C9F000F64F2D /* AFNetworking.framework */,
 				DACF51681C0046ED00F64F2D /* PromiseKit */,
 			);
 			path = Thirdparty;
@@ -615,6 +615,7 @@
 		DACF51651C0042AD00F64F2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -641,6 +642,7 @@
 		DACF51661C0042AD00F64F2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
