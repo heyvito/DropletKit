@@ -1,4 +1,4 @@
-# DropletKit
+# ![Logo](https://dl.dropboxusercontent.com/u/262919/DKLogo.png)
 <p align="center">
     <img alt="Platform" src="https://img.shields.io/badge/platform-iOS%208%2B-yellow.svg?style=flat" />
     <img alt="Language" src="https://img.shields.io/badge/language-ObjC-blue.svg?style=flat" />
