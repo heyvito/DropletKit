@@ -338,7 +338,7 @@
 
 
 /**
- *  Exchanges a authorization code with an access token
+ *  Exchanges an authorization code for an access token
  *
  *  @param code   Token obtained when the user was redirected back to your application
  *  @param uri    Redirect URI used when requesting access to the user's account
@@ -350,4 +350,17 @@
  *  @warning Parameter type for `then` is `DKOAuthResponse *`
  */
 - (PMKPromise *)exchangeOAuthCode:(NSString *)code withRedirectURI:(NSString *)uri applicationKey:(NSString *)key andSecret:(NSString *)secret;
+
+/**
+ *  Exchanges a refresh token for a new Access Token
+ *
+ *  @param token  Your refresh token
+ *  @param key    Your application key, obtained when you registered it with DigitalOcean
+ *  @param secret Your application secret, obtained when you registered it with DigitalOcean
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *          succeeds or fails.
+ *  @warning Parameter type for `then` is `DKOAuthResponse *`
+ */
+- (PMKPromise *)exchangeRefreshToken:(NSString *)token usingApplicationKey:(NSString *)key andSecret:(NSString *)secret;
 @end

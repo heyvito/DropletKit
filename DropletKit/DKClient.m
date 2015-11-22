@@ -426,4 +426,27 @@
         });
     }];
 }
+
+- (PMKPromise *)exchangeRefreshToken:(NSString *)token usingApplicationKey:(NSString *)key andSecret:(NSString *)secret {
+    NSDictionary *data = @{
+                           @"client_id": key,
+                           @"client_secret": secret,
+                           @"refresh_token": token,
+                           @"grant_type": @"refresh_token"
+                           };
+    __weak __typeof__(self) weakSelf = self;
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        __strong __typeof__(self) strongSelf = weakSelf;
+        [strongSelf requestCreateForURL:@"https://cloud.digitalocean.com/v1/oauth/token" withData:data].then(^(id result) {
+            if([result isKindOfClass:[NSDictionary class]]) {
+                DKOAuthResponse *response = [[DKOAuthResponse alloc] initWithDictionary:result];
+                fulfill(response);
+            } else {
+                reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
+            }
+        }).catch(^(id error) {
+            reject(error);
+        });
+    }];
+}
 @end
