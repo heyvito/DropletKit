@@ -29,6 +29,26 @@
 
 #ifndef DisableRemoteTests
 
+- (void)testActionReloading {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Expectations"];
+    [[DKClient sharedInstance] getActions].then(^(DKActionCollection *collection) {
+        DKAction *actionSample = collection.objects[0];
+        [actionSample reloadWithBlock:^(BOOL succeeded) {
+            if(succeeded) {
+                NSLog(@"actionSample #%@ reloaded successfully.", actionSample.actionId);
+                [expectation fulfill];
+            } else {
+                NSLog(@"actionSample #%@ failed to reload.", actionSample.actionId);
+            }
+        }];
+    });
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
 - (void)testAccountEndpoint {
     XCTestExpectation *expectation =
     [self expectationWithDescription:@"Expectations"];

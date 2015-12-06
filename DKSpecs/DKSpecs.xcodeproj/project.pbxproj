@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAC452191C14F9BF00BF9D22 /* DropletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC452181C14F9BF00BF9D22 /* DropletKit.framework */; };
+		DAC4521A1C14F9BF00BF9D22 /* DropletKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAC452181C14F9BF00BF9D22 /* DropletKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DACF53971C00CB3900F64F2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF53961C00CB3900F64F2D /* main.m */; };
 		DACF539A1C00CB3900F64F2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF53991C00CB3900F64F2D /* AppDelegate.m */; };
 		DACF539D1C00CB3900F64F2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF539C1C00CB3900F64F2D /* ViewController.m */; };
@@ -27,7 +29,6 @@
 		DACF53E71C00CD0F00F64F2D /* DKUserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF53DB1C00CD0F00F64F2D /* DKUserTest.m */; };
 		DACF53E81C00CD0F00F64F2D /* RemoteAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF53DC1C00CD0F00F64F2D /* RemoteAPITest.m */; };
 		DAE39BD11C00EB64005C668C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE39BCF1C00EB64005C668C /* AFNetworking.framework */; };
-		DAE39BD21C00EB64005C668C /* DropletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE39BD01C00EB64005C668C /* DropletKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DAC4521B1C14F9BF00BF9D22 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DAC4521A1C14F9BF00BF9D22 /* DropletKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DACF53F51C00D67D00F64F2D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DAC452181C14F9BF00BF9D22 /* DropletKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropletKit.framework; sourceTree = "<group>"; };
 		DACF53921C00CB3800F64F2D /* DKSpecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKSpecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF53961C00CB3900F64F2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DACF53981C00CB3900F64F2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,7 +92,6 @@
 		DACF53DB1C00CD0F00F64F2D /* DKUserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKUserTest.m; sourceTree = "<group>"; };
 		DACF53DC1C00CD0F00F64F2D /* RemoteAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteAPITest.m; sourceTree = "<group>"; };
 		DAE39BCF1C00EB64005C668C /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
-		DAE39BD01C00EB64005C668C /* DropletKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropletKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE39BD21C00EB64005C668C /* DropletKit.framework in Frameworks */,
+				DAC452191C14F9BF00BF9D22 /* DropletKit.framework in Frameworks */,
 				DAE39BD11C00EB64005C668C /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,8 +117,8 @@
 		DACF53891C00CB3800F64F2D = {
 			isa = PBXGroup;
 			children = (
+				DAC452181C14F9BF00BF9D22 /* DropletKit.framework */,
 				DAE39BCF1C00EB64005C668C /* AFNetworking.framework */,
-				DAE39BD01C00EB64005C668C /* DropletKit.framework */,
 				DACF53941C00CB3800F64F2D /* DKSpecs */,
 				DACF53AE1C00CB3900F64F2D /* DKSpecsTests */,
 				DACF53931C00CB3800F64F2D /* Products */,
@@ -179,6 +191,7 @@
 				DACF53901C00CB3800F64F2D /* Resources */,
 				DACF53F51C00D67D00F64F2D /* CopyFiles */,
 				DACF54491C00E80700F64F2D /* ShellScript */,
+				DAC4521B1C14F9BF00BF9D22 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
