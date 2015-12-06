@@ -64,8 +64,20 @@
 @property NSDate *startedAt;
 
 /**
+ *  Whether this action has been completed or not.
+ */
+@property BOOL completed;
+
+/**
  *  A date and time that represents when the action was completed.
+ *  @warning This property has `nil` as value when the action has not been completed yet.
  */
 @property NSDate *completedAt;
+
+/**
+ *  Reloads this action status, useful when watching for changes or waiting for an action
+ *  to complete.
+ */
+- (void)reloadWithBlock:(void(^)(BOOL))block;
 
 @end
