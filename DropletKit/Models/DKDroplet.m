@@ -30,6 +30,7 @@
         
         self.locked = [[data objectForKey:@"locked"] boolValue];
         self.kernel = [[DKKernel alloc] initWithDictionary:data[@"kernel"]];
+        self.isKernelManagedInternally = self.kernel == nil;
         self.image = [[DKImage alloc] initWithDictionary:data[@"image"]];
         self.size = [[DKSize alloc] initWithDictionary:data[@"size"]];
         self.region = [[DKRegion alloc] initWithDictionary:data[@"region"]];

@@ -86,6 +86,13 @@
 @property NSDate *createdAt;
 
 /**
+ *  Indicates whether this machine kernel is managed by internally by
+ *  the DigitalOcean backend or not. When `true`, indicates that kernel
+ *  information provided by the kernel property may not be available.
+ */
+@property BOOL isKernelManagedInternally;
+
+/**
  *  The current kernel. This will initially be set to the kernel of
  *  the base image when the Droplet is created.
  */
