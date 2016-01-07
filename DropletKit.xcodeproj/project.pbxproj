@@ -198,6 +198,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA304C7D1C3EEB66005F20B5 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				DACF524B1C00BFE800F64F2D /* Models.h */,
+				DACF52AD1C00C02500F64F2D /* DKBaseModel.h */,
+				DACF52AE1C00C02500F64F2D /* DKBaseModel.m */,
+				DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */,
+				DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */,
+				DACF52B11C00C02500F64F2D /* DKChildProtocol.h */,
+				DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */,
+			);
+			name = Bases;
+			sourceTree = "<group>";
+		};
+		DA304C7E1C3EED70005F20B5 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				DACF524F1C00C00200F64F2D /* DKImageCollection.h */,
+				DACF52501C00C00200F64F2D /* DKImageCollection.m */,
+				DACF52571C00C00200F64F2D /* DKKernelCollection.h */,
+				DACF52581C00C00200F64F2D /* DKKernelCollection.m */,
+				DACF52591C00C00200F64F2D /* DKNetworkCollection.h */,
+				DACF525A1C00C00200F64F2D /* DKNetworkCollection.m */,
+				DACF525E1C00C00200F64F2D /* DKRegionCollection.h */,
+				DACF525F1C00C00200F64F2D /* DKRegionCollection.m */,
+				DACF52621C00C00200F64F2D /* DKSizeCollection.h */,
+				DACF52631C00C00200F64F2D /* DKSizeCollection.m */,
+				DACF52661C00C00200F64F2D /* DKSnapshotCollection.h */,
+				DACF52671C00C00200F64F2D /* DKSnapshotCollection.m */,
+				DACF526A1C00C00200F64F2D /* DKSSHKeyCollection.h */,
+				DACF526B1C00C00200F64F2D /* DKSSHKeyCollection.m */,
+				DACF52911C00C00E00F64F2D /* DKDomainCollection.h */,
+				DACF52921C00C00E00F64F2D /* DKDomainCollection.m */,
+				DACF52951C00C00E00F64F2D /* DKDomainRecordCollection.h */,
+				DACF52961C00C00E00F64F2D /* DKDomainRecordCollection.m */,
+				DACF52991C00C00E00F64F2D /* DKDropletCollection.h */,
+				DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */,
+				DACF52A91C00C02500F64F2D /* DKActionCollection.h */,
+				DACF52AA1C00C02500F64F2D /* DKActionCollection.m */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
 		DACF51521C0042AD00F64F2D = {
 			isa = PBXGroup;
 			children = (
@@ -293,63 +336,36 @@
 		DACF524A1C00BFAA00F64F2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA304C7E1C3EED70005F20B5 /* Collections */,
+				DA304C7D1C3EEB66005F20B5 /* Bases */,
 				DACF52A71C00C02500F64F2D /* DKAction.h */,
 				DACF52A81C00C02500F64F2D /* DKAction.m */,
-				DACF52A91C00C02500F64F2D /* DKActionCollection.h */,
-				DACF52AA1C00C02500F64F2D /* DKActionCollection.m */,
 				DACF52AB1C00C02500F64F2D /* DKBackupWindow.h */,
 				DACF52AC1C00C02500F64F2D /* DKBackupWindow.m */,
-				DACF52AD1C00C02500F64F2D /* DKBaseModel.h */,
-				DACF52AE1C00C02500F64F2D /* DKBaseModel.m */,
-				DACF52AF1C00C02500F64F2D /* DKBaseModelCollection.h */,
-				DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */,
-				DACF52B11C00C02500F64F2D /* DKChildProtocol.h */,
-				DACF524B1C00BFE800F64F2D /* Models.h */,
 				DACF524D1C00C00200F64F2D /* DKImage.h */,
 				DACF524E1C00C00200F64F2D /* DKImage.m */,
-				DACF524F1C00C00200F64F2D /* DKImageCollection.h */,
-				DACF52501C00C00200F64F2D /* DKImageCollection.m */,
 				DACF52511C00C00200F64F2D /* DKIPv4Network.h */,
 				DACF52521C00C00200F64F2D /* DKIPv4Network.m */,
 				DACF52531C00C00200F64F2D /* DKIPv6Network.h */,
 				DACF52541C00C00200F64F2D /* DKIPv6Network.m */,
 				DACF52551C00C00200F64F2D /* DKKernel.h */,
 				DACF52561C00C00200F64F2D /* DKKernel.m */,
-				DACF52571C00C00200F64F2D /* DKKernelCollection.h */,
-				DACF52581C00C00200F64F2D /* DKKernelCollection.m */,
-				DACF52591C00C00200F64F2D /* DKNetworkCollection.h */,
-				DACF525A1C00C00200F64F2D /* DKNetworkCollection.m */,
-				DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */,
 				DACF525C1C00C00200F64F2D /* DKRegion.h */,
 				DACF525D1C00C00200F64F2D /* DKRegion.m */,
-				DACF525E1C00C00200F64F2D /* DKRegionCollection.h */,
-				DACF525F1C00C00200F64F2D /* DKRegionCollection.m */,
 				DACF52601C00C00200F64F2D /* DKSize.h */,
 				DACF52611C00C00200F64F2D /* DKSize.m */,
-				DACF52621C00C00200F64F2D /* DKSizeCollection.h */,
-				DACF52631C00C00200F64F2D /* DKSizeCollection.m */,
 				DACF52641C00C00200F64F2D /* DKSnapshot.h */,
 				DACF52651C00C00200F64F2D /* DKSnapshot.m */,
-				DACF52661C00C00200F64F2D /* DKSnapshotCollection.h */,
-				DACF52671C00C00200F64F2D /* DKSnapshotCollection.m */,
 				DACF52681C00C00200F64F2D /* DKSSHKey.h */,
 				DACF52691C00C00200F64F2D /* DKSSHKey.m */,
-				DACF526A1C00C00200F64F2D /* DKSSHKeyCollection.h */,
-				DACF526B1C00C00200F64F2D /* DKSSHKeyCollection.m */,
 				DACF526C1C00C00200F64F2D /* DKUser.h */,
 				DACF526D1C00C00200F64F2D /* DKUser.m */,
 				DACF528F1C00C00E00F64F2D /* DKDomain.h */,
 				DACF52901C00C00E00F64F2D /* DKDomain.m */,
-				DACF52911C00C00E00F64F2D /* DKDomainCollection.h */,
-				DACF52921C00C00E00F64F2D /* DKDomainCollection.m */,
 				DACF52931C00C00E00F64F2D /* DKDomainRecord.h */,
 				DACF52941C00C00E00F64F2D /* DKDomainRecord.m */,
-				DACF52951C00C00E00F64F2D /* DKDomainRecordCollection.h */,
-				DACF52961C00C00E00F64F2D /* DKDomainRecordCollection.m */,
 				DACF52971C00C00E00F64F2D /* DKDroplet.h */,
 				DACF52981C00C00E00F64F2D /* DKDroplet.m */,
-				DACF52991C00C00E00F64F2D /* DKDropletCollection.h */,
-				DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */,
 				DA52612D1C014FCD003E077C /* DKOAuthResponse.h */,
 				DA52612E1C014FCD003E077C /* DKOAuthResponse.m */,
 			);
