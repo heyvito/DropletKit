@@ -124,7 +124,7 @@
             }
 
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -156,7 +156,7 @@
                 fulfill(collection);
             }
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -183,7 +183,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -198,7 +198,7 @@
             [strongSelf updateRateLimitWithTask:operation];
             fulfill(responseObject);
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -213,7 +213,7 @@
             [strongSelf updateRateLimitWithTask:operation];
             fulfill(responseObject);
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -243,7 +243,7 @@
                 fulfill(action);
             }
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
@@ -335,7 +335,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(id error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }
@@ -373,7 +373,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(id error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }
@@ -395,7 +395,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(id error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }
@@ -423,7 +423,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(id error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }
@@ -446,7 +446,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(id error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }

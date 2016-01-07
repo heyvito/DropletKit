@@ -101,7 +101,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         }).catch(^(NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         });
     }];
 }

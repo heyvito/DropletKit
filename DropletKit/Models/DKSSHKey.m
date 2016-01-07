@@ -44,7 +44,7 @@
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
             }
         } failure:^(NSURLSessionTask *operation, NSError *error) {
-            reject(error);
+            reject([DKErrorDomain tryTranslateAFError:error]);
         }];
     }];
 }
