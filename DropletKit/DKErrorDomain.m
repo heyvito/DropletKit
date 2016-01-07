@@ -55,4 +55,17 @@
 + (NSError *)tokenExpired {
     return [DKErrorDomain errorWithErrorCode:DKErrorCode_TokenExpired];
 }
+
++ (NSError *)tryTranslateAFError:(NSError *)error {
+    if([error.domain hasPrefix:@"com.alamofire.error.serialization.response"] && error.userInfo) {
+        id info = error.userInfo[@"com.alamofire.serialization.response.error.response"];
+        if(info && [info isKindOfClass:[NSHTTPURLResponse class]]) {
+            NSHTTPURLResponse *resp = (NSHTTPURLResponse *)info;
+            if(resp.statusCode == 401) {
+                return [DKErrorDomain tokenExpired];
+            }
+        }
+    }
+    return error;
+}
 @end

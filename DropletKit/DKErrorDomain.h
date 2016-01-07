@@ -20,4 +20,6 @@
 + (NSError *)inconsistentArgumentsWithReason:(NSString *)reason;
 + (NSError *)dropletLocked;
 + (NSError *)tokenExpired;
+
++ (NSError *)tryTranslateAFError:(NSError *)error;
 @end
