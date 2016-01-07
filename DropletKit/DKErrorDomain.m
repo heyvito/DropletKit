@@ -51,4 +51,8 @@
 + (NSError *)dropletLocked {
     return [DKErrorDomain errorWithErrorCode:DKErrorCode_DropletLocked];
 }
+
++ (NSError *)tokenExpired {
+    return [DKErrorDomain errorWithErrorCode:DKErrorCode_TokenExpired];
+}
 @end

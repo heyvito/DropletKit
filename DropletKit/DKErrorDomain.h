@@ -19,4 +19,5 @@
 + (NSError *)unexpectedResponse;
 + (NSError *)inconsistentArgumentsWithReason:(NSString *)reason;
 + (NSError *)dropletLocked;
++ (NSError *)tokenExpired;
 @end

@@ -18,6 +18,7 @@ typedef enum {
     DKErrorCode_UnexpectedResponse,
     DKErrorCode_InconsistentArguments,
     DKErrorCode_DropletLocked,
+    DKErrorCode_TokenExpired,
 } DKErrorCode;
 
 typedef enum {
