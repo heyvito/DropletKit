@@ -12,14 +12,10 @@
 @implementation DKBackupWindow
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
-    if(!CHECK_DATA_CONTAINS(start, end)) {
-        self = nil;
-    } else {
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
+    if(CHECK_DATA_CONTAINS(start, end)) {
         EXPAND_DATA_DATE_LOCAL(start, windowStart)
         EXPAND_DATA_DATE_LOCAL(end, windowEnd)
     }
-    return self;
 }
 @end

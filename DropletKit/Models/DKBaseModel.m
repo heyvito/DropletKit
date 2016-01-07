@@ -9,7 +9,10 @@
 #import "DKBaseModel.h"
 #import "DKClient.h"
 
-@implementation DKBaseModel
+@implementation DKBaseModel {
+    NSDictionary *initialDictionary;
+}
+
 - (instancetype)initWithJSON:(NSData *)data {
     self = [super init];
     if(data == nil) {
@@ -32,9 +35,15 @@
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = nil;
-    [self doesNotRecognizeSelector:_cmd];
+    if(self = [super init]) {
+        initialDictionary = data;
+        [self fillInstanceWithDictionary:data];
+    }
     return self;
+}
+
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
+    [self doesNotRecognizeSelector:_cmd];
 }
 
 + (BOOL)checkData:(NSDictionary const *)dict contains:(NSString *)keysSeparatedByCommas {
@@ -64,6 +73,12 @@
 - (PMKPromise *)runAction:(NSString *)action withData:(NSDictionary *)dict {
     DKClient *instance = [DKClient sharedInstance];
     return [instance requestAction:action forUrl:[self actionsURLWithAPIInstance:instance] andData:dict];
+}
+
+// MARK: NSCopying protocol
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] initWithDictionary:initialDictionary];
 }
 
 @end

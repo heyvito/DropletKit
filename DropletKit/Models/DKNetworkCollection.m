@@ -11,8 +11,7 @@
 
 @implementation DKNetworkCollection
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     NSMutableArray *v4Networks = [[NSMutableArray alloc] init];
     NSMutableArray *v6Networks = [[NSMutableArray alloc] init];
     if([[data allKeys] containsObject:@"v4"]) {
@@ -29,6 +28,5 @@
     }
     self.ipv4Networks = v4Networks;
     self.ipv6Networks = v6Networks;
-    return self;
 }
 @end

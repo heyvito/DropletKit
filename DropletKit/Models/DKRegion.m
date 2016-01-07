@@ -12,14 +12,10 @@
 @implementation DKRegion
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
-    if(!CHECK_DATA_CONTAINS(name, slug, sizes, features, available)) {
-        self = nil;
-    } else {
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
+    if(CHECK_DATA_CONTAINS(name, slug, sizes, features, available)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, name, slug, sizes, features)
         self.available = [data[@"available"] boolValue];
     }
-    return self;
 }
 @end

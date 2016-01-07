@@ -13,14 +13,10 @@
 @synthesize ipAddress, netmask, gateway, type;
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
-    if(!CHECK_DATA_CONTAINS(ip_address, netmask, gateway, type)) {
-        self = nil;
-    } else {
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
+    if(CHECK_DATA_CONTAINS(ip_address, netmask, gateway, type)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, netmask, gateway, type)
         EXPAND_DATA_LOCAL(ip_address, ipAddress)
     }
-    return self;
 }
 @end

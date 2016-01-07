@@ -12,19 +12,15 @@
 @implementation DKSSHKey
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     if([[data allKeys] containsObject:@"ssh_key"]) {
         data = [data objectForKey:@"ssh_key"];
     }
-    if(!CHECK_DATA_CONTAINS(id, fingerprint, public_key, name)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(id, fingerprint, public_key, name)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, fingerprint, name)
         EXPAND_DICT_LOCAL(data, public_key, publicKey)
         EXPAND_DICT_LOCAL(data, id, sshKeyId)
     }
-    return self;
 }
 
 

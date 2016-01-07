@@ -12,14 +12,11 @@
 @implementation DKDroplet
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     if([[data allKeys] containsObject:@"droplet"]) {
         data = data[@"droplet"];
     }
-    if(!CHECK_DATA_CONTAINS(id, name, memory, vcpus, disk, locked, status, kernel, created_at, features, backup_ids, snapshot_ids, image, size, size_slug, networks, region)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(id, name, memory, vcpus, disk, locked, status, kernel, created_at, features, backup_ids, snapshot_ids, image, size, size_slug, networks, region)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, name, memory, disk, status, features)
         EXPAND_DATA_LOCAL(id, dropletId)
         EXPAND_DATA_LOCAL(vcpus, vCPUs)
@@ -38,7 +35,6 @@
         self.nextBackupWindow = [[DKBackupWindow alloc] initWithDictionary:data[@"next_backup_window"]];
         self.hasNextBackupWindow = self.nextBackupWindow != nil;
     }
-    return self;
 }
 
 

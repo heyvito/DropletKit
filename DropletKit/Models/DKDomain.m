@@ -12,18 +12,14 @@
 @implementation DKDomain
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     if([[data allKeys] containsObject:@"domain"]) {
         data = [data objectForKey:@"domain"];
     }
-    if(!CHECK_DATA_CONTAINS(name, ip_address, zone_file)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(name, ip_address, zone_file)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, name, ttl);
         EXPAND_DATA_LOCAL(zone_file, zoneFile)
     }
-    return self;
 }
 
 

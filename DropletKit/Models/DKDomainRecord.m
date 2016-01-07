@@ -18,20 +18,16 @@
 
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     _parentDomain = nil;
     if([[data allKeys] containsObject:@"domain_record"]) {
         data = [data objectForKey:@"domain_record"];
     }
-    if(!CHECK_DATA_CONTAINS(id, type, name, data, priority, port, weight)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(id, type, name, data, priority, port, weight)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, type, name, priority, port, weight)
         EXPAND_DATA_LOCAL(id, recordId)
         EXPAND_DATA_LOCAL(data, recordData)
     }
-    return self;
 }
 
 

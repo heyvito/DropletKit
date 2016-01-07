@@ -12,14 +12,11 @@
 @implementation DKAction
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     if([[data allKeys] containsObject:@"action"]) {
         data = [data objectForKey:@"action"];
     }
-    if(!CHECK_DATA_CONTAINS(id, status, type, started_at, completed_at, resource_id, resource_type, region_slug)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(id, status, type, started_at, completed_at, resource_id, resource_type, region_slug)) {
         // Common Items
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, status, type)
         // Renamed items
@@ -36,7 +33,6 @@
             self.completed = NO;
         }
     }
-    return self;
 }
 
 - (void)reloadWithBlock:(void (^)(BOOL))block {

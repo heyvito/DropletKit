@@ -10,7 +10,7 @@
 
 @class PMKPromise, DKClient;
 
-@interface DKBaseModel : NSObject
+@interface DKBaseModel : NSObject <NSCopying>
 - (instancetype)initWithJSON:(NSData *)data;
 - (instancetype)initWithDictionary:(NSDictionary *)data;
 

@@ -12,21 +12,15 @@
 @implementation DKKernel
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
-    if(data == nil || [data isEqual:[NSNull null]]) {
-        self = nil;
-    } else {
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
+    if(data != nil || ![data isEqual:[NSNull null]]) {
         if([[data allKeys] containsObject:@"kernel"]) {
             data = [data objectForKey:@"kernel"];
         }
-        if(!CHECK_DATA_CONTAINS(kernel_id, name, version)) {
-            self = nil;
-        } else {
+        if(CHECK_DATA_CONTAINS(kernel_id, name, version)) {
             CALL_MACRO_X_FOR_EACH(EXPAND_DATA, name, version)
             EXPAND_DATA_LOCAL(id, kernelId)
         }
     }
-    return self;
 }
 @end

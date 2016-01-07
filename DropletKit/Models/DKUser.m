@@ -12,19 +12,15 @@
 @implementation DKUser
 
 #pragma mark Life cycle
-- (instancetype)initWithDictionary:(NSDictionary *)data {
-    self = [super init];
+- (void)fillInstanceWithDictionary:(NSDictionary *)data {
     if([[data allKeys] containsObject:@"account"]) {
         data = [data objectForKey:@"account"];
     }
-    if(!CHECK_DATA_CONTAINS(email, uuid, droplet_limit, email_verified)) {
-        self = nil;
-    } else {
+    if(CHECK_DATA_CONTAINS(email, uuid, droplet_limit, email_verified)) {
         CALL_MACRO_X_FOR_EACH(EXPAND_DATA, email, uuid)
         EXPAND_DICT_LOCAL(data, droplet_limit, dropletLimit)
         EXPAND_DICT_LOCAL_BOOL(data, email_verified, emailVerified)
     }
-    return self;
 }
 
 @end
