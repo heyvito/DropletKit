@@ -110,8 +110,8 @@
     __weak __typeof__(self) weakSelf = self;
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
-        [[strongSelf sharedSessionManager] GET:url parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
-            [strongSelf updateRateLimitWithTask:operation];
+        [[strongSelf sharedSessionManager] GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [strongSelf updateRateLimitWithTask:task];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
                 return;
@@ -122,7 +122,8 @@
             } else {
                 fulfill(item);
             }
-        } failure:^(NSURLSessionTask *operation, NSError *error) {
+
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             reject(error);
         }];
     }];
@@ -134,7 +135,7 @@
     __weak __typeof__(self) weakSelf = self;
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
-        [[strongSelf sharedSessionManager] GET:url parameters:nil success:^(NSURLSessionTask *operation, id responseObject) {
+        [[strongSelf sharedSessionManager] GET:url parameters:nil progress:nil success:^(NSURLSessionTask *operation, id responseObject) {
             [strongSelf updateRateLimitWithTask:operation];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
@@ -193,7 +194,7 @@
     __weak __typeof__(self) weakSelf = self;
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
-        [[strongSelf sharedSessionManager] POST:url parameters:data success:^(NSURLSessionTask *operation, id responseObject) {
+        [[strongSelf sharedSessionManager] POST:url parameters:data progress:nil success:^(NSURLSessionTask *operation, id responseObject) {
             [strongSelf updateRateLimitWithTask:operation];
             fulfill(responseObject);
         } failure:^(NSURLSessionTask *operation, NSError *error) {
@@ -229,7 +230,7 @@
     __weak __typeof__(self) weakSelf = self;
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         __strong __typeof__(self) strongSelf = weakSelf;
-        [[strongSelf sharedSessionManager] POST:url parameters:dict success:^(NSURLSessionTask *operation, id responseObject) {
+        [[strongSelf sharedSessionManager] POST:url parameters:dict progress:nil success:^(NSURLSessionTask *operation, id responseObject) {
             [strongSelf updateRateLimitWithTask:operation];
             if(![responseObject isKindOfClass:[NSDictionary class]]) {
                 reject([DKErrorDomain inconsistentDataReceivedFromEndpoint]);
