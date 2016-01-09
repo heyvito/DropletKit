@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DA304C881C41ADED005F20B5 /* DKBackupCollection.h */; };
+		DA304C8B1C41ADED005F20B5 /* DKBackupCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA304C891C41ADED005F20B5 /* DKBackupCollection.m */; };
 		DA52612F1C014FCD003E077C /* DKOAuthResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DA52612D1C014FCD003E077C /* DKOAuthResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA5261301C014FCD003E077C /* DKOAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA52612E1C014FCD003E077C /* DKOAuthResponse.m */; };
 		DACF51751C00470900F64F2D /* NSMethodSignatureForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */; };
@@ -96,6 +98,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA304C881C41ADED005F20B5 /* DKBackupCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKBackupCollection.h; sourceTree = "<group>"; };
+		DA304C891C41ADED005F20B5 /* DKBackupCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBackupCollection.m; sourceTree = "<group>"; };
 		DA52612D1C014FCD003E077C /* DKOAuthResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKOAuthResponse.h; sourceTree = "<group>"; };
 		DA52612E1C014FCD003E077C /* DKOAuthResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKOAuthResponse.m; sourceTree = "<group>"; };
 		DACF515C1C0042AD00F64F2D /* DropletKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropletKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +241,8 @@
 				DACF529A1C00C00E00F64F2D /* DKDropletCollection.m */,
 				DACF52A91C00C02500F64F2D /* DKActionCollection.h */,
 				DACF52AA1C00C02500F64F2D /* DKActionCollection.m */,
+				DA304C881C41ADED005F20B5 /* DKBackupCollection.h */,
+				DA304C891C41ADED005F20B5 /* DKBackupCollection.m */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
@@ -336,8 +342,8 @@
 		DACF524A1C00BFAA00F64F2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DA304C7E1C3EED70005F20B5 /* Collections */,
 				DA304C7D1C3EEB66005F20B5 /* Bases */,
+				DA304C7E1C3EED70005F20B5 /* Collections */,
 				DACF52A71C00C02500F64F2D /* DKAction.h */,
 				DACF52A81C00C02500F64F2D /* DKAction.m */,
 				DACF52AB1C00C02500F64F2D /* DKBackupWindow.h */,
@@ -406,6 +412,7 @@
 				DACF52B61C00C02500F64F2D /* DKBackupWindow.h in Headers */,
 				DACF527D1C00C00200F64F2D /* DKRegion.h in Headers */,
 				DACF528B1C00C00200F64F2D /* DKSSHKeyCollection.h in Headers */,
+				DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */,
 				DACF52251C00BCB600F64F2D /* PromiseKit.h in Headers */,
 				DACF529B1C00C00E00F64F2D /* DKDomain.h in Headers */,
 				DACF529F1C00C00E00F64F2D /* DKDomainRecord.h in Headers */,
@@ -503,6 +510,7 @@
 				DACF52A21C00C00E00F64F2D /* DKDomainRecordCollection.m in Sources */,
 				DACF52B31C00C02500F64F2D /* DKAction.m in Sources */,
 				DACF527B1C00C00200F64F2D /* DKNetworkCollection.m in Sources */,
+				DA304C8B1C41ADED005F20B5 /* DKBackupCollection.m in Sources */,
 				DACF52151C0058A400F64F2D /* PMKPromise+Join.m in Sources */,
 				DACF529E1C00C00E00F64F2D /* DKDomainCollection.m in Sources */,
 				DACF52161C0058A400F64F2D /* PMKPromise+Pause.m in Sources */,

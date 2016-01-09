@@ -51,7 +51,7 @@
 
 - (PMKPromise *)getBackups {
     DKClient *instance = [DKClient sharedInstance];
-    return [instance requestForSpecializedCollectionWithType:[DKSnapshotCollection class] andFullURL:[instance apiURLForEndpointWithComponents:@"droplets", self.dropletId, @"backups", nil]];
+    return [instance requestForSpecializedCollectionWithType:[DKBackupCollection class] andFullURL:[instance apiURLForEndpointWithComponents:@"droplets", self.dropletId, @"backups", nil]];
 }
 
 - (PMKPromise *)getActions {

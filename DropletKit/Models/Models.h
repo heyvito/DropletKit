@@ -38,5 +38,6 @@
     #import "DKSizeCollection.h"
     #import "DKKernelCollection.h"
     #import "DKSnapshotCollection.h"
+    #import "DKBackupCollection.h"
 
 #endif /* Models_h */
