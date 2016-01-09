@@ -53,7 +53,7 @@ FOUNDATION_EXPORT const unsigned char DropletKitVersionString[];
 #import <DropletKit/DKSizeCollection.h>
 #import <DropletKit/DKKernelCollection.h>
 #import <DropletKit/DKSnapshotCollection.h>
-
+#import <DropletKit/DKBackupCollection.h>
 
 
 #import "Models.h"

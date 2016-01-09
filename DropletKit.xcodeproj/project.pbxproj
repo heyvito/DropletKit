@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DA304C881C41ADED005F20B5 /* DKBackupCollection.h */; };
+		DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = DA304C881C41ADED005F20B5 /* DKBackupCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA304C8B1C41ADED005F20B5 /* DKBackupCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA304C891C41ADED005F20B5 /* DKBackupCollection.m */; };
 		DA52612F1C014FCD003E077C /* DKOAuthResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DA52612D1C014FCD003E077C /* DKOAuthResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA5261301C014FCD003E077C /* DKOAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA52612E1C014FCD003E077C /* DKOAuthResponse.m */; };
@@ -412,7 +412,6 @@
 				DACF52B61C00C02500F64F2D /* DKBackupWindow.h in Headers */,
 				DACF527D1C00C00200F64F2D /* DKRegion.h in Headers */,
 				DACF528B1C00C00200F64F2D /* DKSSHKeyCollection.h in Headers */,
-				DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */,
 				DACF52251C00BCB600F64F2D /* PromiseKit.h in Headers */,
 				DACF529B1C00C00E00F64F2D /* DKDomain.h in Headers */,
 				DACF529F1C00C00E00F64F2D /* DKDomainRecord.h in Headers */,
@@ -431,6 +430,7 @@
 				DACF52211C00BCB600F64F2D /* Promise+Until.h in Headers */,
 				DACF52221C00BCB600F64F2D /* Promise+When.h in Headers */,
 				DACF52231C00BCB600F64F2D /* Promise+Zalgo.h in Headers */,
+				DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */,
 				DACF52241C00BCB600F64F2D /* Promise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
