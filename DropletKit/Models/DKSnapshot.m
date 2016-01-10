@@ -21,4 +21,12 @@
         EXPAND_DATA_DATE_LOCAL(created_at, createdAt)
     }
 }
+
+- (NSNumber *)restorableId {
+    return self.snapshotId;
+}
+
+- (NSString *)restorableSlug {
+    return self.slug;
+}
 @end

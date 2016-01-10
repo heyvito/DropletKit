@@ -70,5 +70,13 @@
     return [[DKClient sharedInstance] getActionWithId:actionId];
 }
 
+- (NSNumber *)restorableId {
+    return self.imageId;
+}
+
+- (NSString *)restorableSlug {
+    return self.slug;
+}
+
 
 @end
