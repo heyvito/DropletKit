@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DKRestorable.h"
 
 @class PMKPromise, DKClient;
 

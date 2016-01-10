@@ -11,6 +11,7 @@
 		DA304C8B1C41ADED005F20B5 /* DKBackupCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA304C891C41ADED005F20B5 /* DKBackupCollection.m */; };
 		DA52612F1C014FCD003E077C /* DKOAuthResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DA52612D1C014FCD003E077C /* DKOAuthResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA5261301C014FCD003E077C /* DKOAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA52612E1C014FCD003E077C /* DKOAuthResponse.m */; };
+		DAB239CC1C43080300A90A13 /* DKRestorable.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB239CB1C43080300A90A13 /* DKRestorable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DACF51751C00470900F64F2D /* NSMethodSignatureForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF516A1C00470900F64F2D /* NSMethodSignatureForBlock.m */; };
 		DACF51D51C004B1600F64F2D /* DKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51941C004B1600F64F2D /* DKClient.m */; };
 		DACF51D71C004B1600F64F2D /* DKErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF51961C004B1600F64F2D /* DKErrorDomain.m */; };
@@ -102,6 +103,7 @@
 		DA304C891C41ADED005F20B5 /* DKBackupCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKBackupCollection.m; sourceTree = "<group>"; };
 		DA52612D1C014FCD003E077C /* DKOAuthResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKOAuthResponse.h; sourceTree = "<group>"; };
 		DA52612E1C014FCD003E077C /* DKOAuthResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKOAuthResponse.m; sourceTree = "<group>"; };
+		DAB239CB1C43080300A90A13 /* DKRestorable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRestorable.h; sourceTree = "<group>"; };
 		DACF515C1C0042AD00F64F2D /* DropletKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropletKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF515F1C0042AD00F64F2D /* DropletKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropletKit.h; sourceTree = "<group>"; };
 		DACF51611C0042AD00F64F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				DACF52B01C00C02500F64F2D /* DKBaseModelCollection.m */,
 				DACF52B11C00C02500F64F2D /* DKChildProtocol.h */,
 				DACF525B1C00C00200F64F2D /* DKNetworkModelProtocol.h */,
+				DAB239CB1C43080300A90A13 /* DKRestorable.h */,
 			);
 			name = Bases;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				DACF52221C00BCB600F64F2D /* Promise+When.h in Headers */,
 				DACF52231C00BCB600F64F2D /* Promise+Zalgo.h in Headers */,
 				DA304C8A1C41ADED005F20B5 /* DKBackupCollection.h in Headers */,
+				DAB239CC1C43080300A90A13 /* DKRestorable.h in Headers */,
 				DACF52241C00BCB600F64F2D /* Promise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
