@@ -14,7 +14,7 @@
  *  point of time. This snapshot can be used to base new Droplets
  *  or restore them to this previous state.
  */
-@interface DKSnapshot : DKBaseModel
+@interface DKSnapshot : DKBaseModel <DKRestorable>
 
 #pragma mark Common properties
 

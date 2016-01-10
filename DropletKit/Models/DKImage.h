@@ -17,7 +17,7 @@
  *  third category that it can represent is a public Linux distribution or 
  *  application image that is used as a base to create Droplets.
  */
-@interface DKImage : DKBaseModel
+@interface DKImage : DKBaseModel <DKRestorable>
 
 #pragma mark Common properties
 
