@@ -125,8 +125,8 @@
     return [instance requestDeleteForURL:[instance apiURLForEndpointWithComponents:@"droplets", self.dropletId, nil]];
 }
 
-- (PMKPromise *)restoreWithImage:(DKImage *)image {
-    return [self restoreWithImageId:image.imageId];
+- (PMKPromise *)restoreWithRestorableItem:(id<DKRestorable>)item {
+    return [self restoreWithImageId:[item restorableId]];
 }
 
 - (PMKPromise *)restoreWithImageId:(NSNumber *)imageId {

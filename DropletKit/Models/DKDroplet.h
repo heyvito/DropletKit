@@ -250,17 +250,18 @@
  */
 - (PMKPromise *)powerOn;
 
+
 /**
- *  Restores this Droplet to a previous state by using an DKImage object
+ *  Restores this Droplet to a previous state by using an DKRestorable object. 
+ *  This object may represent a DKSnapshot or DKImage
  *
- *  @param image DKImage object referencing an image or snapshot to restore
- *               this Droplet to.
+ *  @param item DKRestorable-compatible object
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKAction`
  */
-- (PMKPromise *)restoreWithImage:(DKImage *)image;
+- (PMKPromise *)restoreWithRestorableItem:(id<DKRestorable>)item;
 
 /**
  *  Restores this Droplet to a previous state by using an Image id
