@@ -92,6 +92,17 @@
 - (PMKPromise *)getDroplets;
 
 /**
+ *  Gets a Droplet with a given ID
+ *
+ *  @param dropletId ID of the Droplet to be get
+ *
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
+ *          succeeds or fails.
+ *  @warning Paramter type for `then` is `DKDroplet`
+ */
+- (PMKPromise *)getDropletWithId:(NSNumber *)dropletId;
+
+/**
  *  Gets a list of actions performed on droplets, including their
  *  start time and status.
  *

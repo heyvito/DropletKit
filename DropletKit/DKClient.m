@@ -260,6 +260,10 @@
     return [self requestForCollectionOf:@"droplets" andType:[DKDropletCollection class]];
 }
 
+- (PMKPromise *)getDropletWithId:(NSNumber *)dropletId {
+    return [self requestForItemWithType:[DKDroplet class] andFullURL:[self apiURLForEndpointWithComponents:@"droplets", dropletId, nil]];
+}
+
 - (PMKPromise *)getActions {
     return [self requestForCollectionOf:@"actions" andType:[DKActionCollection class]];
 }
