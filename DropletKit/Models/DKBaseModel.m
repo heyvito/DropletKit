@@ -75,10 +75,14 @@
     return [instance requestAction:action forUrl:[self actionsURLWithAPIInstance:instance] andData:dict];
 }
 
-// MARK: NSCopying protocol
+#pragma mark NSCopying protocol
 
 - (id)copyWithZone:(NSZone *)zone {
     return [[[self class] alloc] initWithDictionary:initialDictionary];
+}
+
+- (NSDictionary *)getInitialDictionary {
+    return initialDictionary;
 }
 
 @end
