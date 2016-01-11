@@ -75,7 +75,7 @@
 /**
  *  Gets information about the authenticated account
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKUser`.
  */
@@ -85,7 +85,7 @@
  *  Gets a list of droplets owned by the authenticated
  *  user
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDropletCollection`
  */
@@ -106,7 +106,7 @@
  *  Gets a list of actions performed on droplets, including their
  *  start time and status.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKActionCollection`
  */
@@ -117,7 +117,7 @@
  *
  *  @param actionId ID of the action to be get
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKAction`
  */
@@ -126,7 +126,7 @@
 /**
  *  Gets a list of domains held by the authenticated user.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDomainCollection`
  */
@@ -141,7 +141,7 @@
  *  3. Public Linux distribution or Application Image used as base to create
  *  new droplets
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKImageCollection`
  */
@@ -151,7 +151,7 @@
  *  Gets a list of available distribution images. Those images are base Linux
  *  installations used to create new Droplets.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKImageCollection`
  */
@@ -161,7 +161,7 @@
  *  Gets a list of available application images. Those images are base application
  *  installations used to create new Droplets.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKImageCollection`
  */
@@ -171,7 +171,7 @@
  *  Gets a list of images held by the authenticated user. Those images represent
  *  snapshots and backups of droplets.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKImageCollection`
  */
@@ -180,7 +180,7 @@
 /**
  *  Gets all Public SSH keys for the authenticated user.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKSSHKeyCollection`
  */
@@ -190,7 +190,7 @@
  *  Gets a list of DigitalOcean's DataCenters where Droplets can be
  *  deployed and images can be tranferred.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKRegionCollection`
  */
@@ -199,7 +199,7 @@
 /**
  *  Gets a list of packages of hardware resources that can be used by Droplets
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKSizeCollection`
  */
@@ -218,7 +218,7 @@
  *  @param size   DKSize instance that you wish to select for this Droplet.
  *  @param region DKRegion instance of the region that you wish to deploy in.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDroplet`
  */
@@ -238,7 +238,7 @@
  *  @param region DKRegion instance of the region that you wish to deploy in.
  *  @param keys   NSArray containing DKSSHKeys or SSH Key's Fingerprints.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDroplet`
  */
@@ -261,7 +261,7 @@
  *                 for the Droplet. Automated backups can only be enabled when the
  *                 Droplet is created.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDroplet`
  */
@@ -285,7 +285,7 @@
  *                 Droplet is created.
  *  @param ipv6    A boolean indicating whether IPv6 is enabled on the Droplet.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDroplet`
  */
@@ -311,7 +311,7 @@
  *  @param enablePrivNet A boolean indicating whether private networking is enabled
  *                       for the Droplet. Private networking is currently only available in certain regions.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDroplet`
  */
@@ -325,7 +325,7 @@
  *              will fail if the name has already been taken.
  *  @param ip   The IP address you want the domain to point
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKDomain`
  */
@@ -338,7 +338,7 @@
  *  @param name     The name to give the new SSH key in the user's account.
  *  @param contents A string containing the entire public key.
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKSSHKey`
  */
@@ -364,7 +364,7 @@
  *  @param key    Your application key, obtained when you registered it with DigitalOcean
  *  @param secret Your application secret, obtained when you registered it with DigitalOcean
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKOAuthResponse`
  */
@@ -377,7 +377,7 @@
  *  @param key    Your application key, obtained when you registered it with DigitalOcean
  *  @param secret Your application secret, obtained when you registered it with DigitalOcean
  *
- *  @return A `PMKPromise` that will be fulfilled whenever the requests
+ *  @return A `PMKPromise` that will be fulfilled whenever the request
  *          succeeds or fails.
  *  @warning Parameter type for `then` is `DKOAuthResponse`
  */
