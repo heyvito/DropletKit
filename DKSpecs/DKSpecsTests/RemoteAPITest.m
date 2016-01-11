@@ -146,17 +146,22 @@
     XCTestExpectation *expectation = [self expectationWithDescription:@"Expectation"];
     [[DKClient sharedInstance] getDomains].then(^(DKDomainCollection *collection) {
         NSLog(@"Received %@ domains", collection.totalObjects);
-        DKDomain *d = collection.objects[0];
-        [d domainRecords].then(^(DKDomainRecordCollection *records) {
-            NSLog(@"Received %@ records", records.totalObjects);
-            if(records.totalObjects > 0) {
-                DKDomainRecord* record = records.objects[0];
-                XCTAssertEqual(record.parentDomain, d);
-            }
+        if(collection.objects.count > 0) {
+            DKDomain *d = collection.objects[0];
+            [d domainRecords].then(^(DKDomainRecordCollection *records) {
+                NSLog(@"Received %@ records", records.totalObjects);
+                if(records.totalObjects > 0) {
+                    DKDomainRecord* record = records.objects[0];
+                    XCTAssertEqual(record.parentDomain, d);
+                }
+                [expectation fulfill];
+            });
+        } else {
+            NSLog(@"Skipping test: insufficient collection length.");
             [expectation fulfill];
-        });
-    }).catch(^(void){
-        XCTFail(@"Received an error from the remote endpoint");
+        }
+    }).catch(^(NSError *err){
+        XCTFail(@"Received an error from the remote endpoint: %@", err);
     });
     
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
