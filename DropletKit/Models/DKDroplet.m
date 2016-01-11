@@ -161,5 +161,17 @@
     return [self runAction:@"change_kernel" withData:@{ @"kernel": kernel.kernelId }];
 }
 
+- (void)reloadWithBlock:(void (^)(BOOL))block {
+    [[DKClient sharedInstance] getDropletWithId:self.dropletId].then(^(DKDroplet *droplet) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        [self fillInstanceWithDictionary:[droplet performSelector:@selector(getInitialDictionary) withObject:nil]];
+#pragma clang pop
+        block(YES);
+    }).catch(^{
+        block(NO);
+    });
+}
+
 
 @end

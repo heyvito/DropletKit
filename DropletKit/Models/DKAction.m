@@ -37,30 +37,10 @@
 
 - (void)reloadWithBlock:(void (^)(BOOL))block {
     [[DKClient sharedInstance] getActionWithId:self.actionId].then(^(DKAction *action) {
-        NSArray *baseSelectors = @[
-                                   @"Status",
-                                   @"Type",
-                                   @"ActionId",
-                                   @"ResourceId",
-                                   @"ResourceType",
-                                   @"RegionSlug",
-                                   @"StartedAt",
-                                   @"Completed",
-                                   @"CompletedAt"
-                                   ];
-        for(NSString *selectorBase in baseSelectors) {
-            SEL getter = NSSelectorFromString([NSString stringWithFormat:@"get%@", selectorBase]);
-            SEL setter = NSSelectorFromString([NSString stringWithFormat:@"set%@:", selectorBase]);
-            if([self respondsToSelector:setter] && [action respondsToSelector:getter]) {
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [self performSelector:setter withObject:[action performSelector:getter]];
-#pragma clang diagnostic pop
-            } else {
-                // We have a problem.
-                NSLog(@"[DropletKit] DKAction reloadWithBlock: could not copy using selector tuple: %@ %@", NSStringFromSelector(getter), NSStringFromSelector(setter));
-            }
-        }
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        [self fillInstanceWithDictionary:[action performSelector:@selector(getInitialDictionary) withObject:nil]];
+#pragma clang pop
         block(YES);
     }).catch(^{
         block(NO);

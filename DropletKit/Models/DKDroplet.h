@@ -410,4 +410,10 @@
  */
 - (PMKPromise *)getAction:(NSNumber *)actionId;
 
+/**
+ *  Reloads this droplet status, useful when watching for changes or waiting for an droplet
+ *  to complete.
+ */
+- (void)reloadWithBlock:(void (^)(BOOL))block;
+
 @end
