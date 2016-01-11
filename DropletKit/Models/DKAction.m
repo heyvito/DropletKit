@@ -26,7 +26,7 @@
         EXPAND_DATA_LOCAL(region_slug, regionSlug)
         // NSDate items
         EXPAND_DATA_DATE_LOCAL(started_at, startedAt);
-        if([[data allKeys] containsObject:@"completed_at"]) {
+        if([[data allKeys] containsObject:@"completed_at"] && ![data[@"completed_at"] isEqual:[NSNull null]]) {
             self.completed = YES;
             EXPAND_DATA_DATE_LOCAL(completed_at, completedAt);
         } else {
