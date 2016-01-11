@@ -49,6 +49,28 @@
     }];
 }
 
+
+- (void)testDropletReloading {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Expectations"];
+    [[DKClient sharedInstance] getDroplets].then(^(DKDropletCollection *collection) {
+        DKDroplet *dropletSample = collection.objects[0];
+        [dropletSample reloadWithBlock:^(BOOL succeeded) {
+            if(succeeded) {
+                NSLog(@"dropletSample #%@ reloaded successfully.", dropletSample.dropletId);
+                [expectation fulfill];
+            } else {
+                NSLog(@"dropletSample #%@ failed to reload.", dropletSample.dropletId);
+            }
+        }];
+    });
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
+
 - (void)testAccountEndpoint {
     XCTestExpectation *expectation =
     [self expectationWithDescription:@"Expectations"];
