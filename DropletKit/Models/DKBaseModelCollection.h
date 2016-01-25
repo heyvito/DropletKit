@@ -16,7 +16,7 @@
  *  This class is inherited by model collections, such as 
  *  `DKActionCollection`, `DKImageCollection`, etc.
  */
-@interface DKBaseModelCollection : NSObject
+@interface DKBaseModelCollection : NSObject <NSCopying>
 
 /**
  *  List of objects returned by the remote endpoint.

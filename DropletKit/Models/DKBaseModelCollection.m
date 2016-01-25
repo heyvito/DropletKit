@@ -14,7 +14,8 @@
 #import "DKErrorDomain.h"
 
 @implementation DKBaseModelCollection{
-    NSString* nextPage;
+    NSString *nextPage;
+    NSDictionary *initialDictionary;
 }
 - (instancetype)initWithJsonData:(NSData *)blob {
     self = [super init];
@@ -40,6 +41,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)data {
     self = [super init];
+    initialDictionary = data;
     NSSet *expectedKeys = [NSSet setWithArray: @[ @"meta", @"links", [self expectedArrayKey]]];
     if(![expectedKeys intersectsSet:[NSSet setWithArray:[data allKeys]]]) {
         self = nil;
@@ -96,6 +98,10 @@
 - (Class)expectedResultClass {
     [self doesNotRecognizeSelector:_cmd];
     return nil;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] initWithDictionary:initialDictionary];
 }
 
 @end
