@@ -22,6 +22,8 @@ FOUNDATION_EXPORT const unsigned char DropletKitVersionString[];
 #import <DropletKit/DKErrorDomain.h>
 #import <DropletKit/DKClient.h>
 #import <DropletKit/PromiseKit.h>
+#import <DropletKit/Promise+Hang.h>
+#import <DropletKit/Promise+Zalgo.h>
 #import <DropletKit/Models.h>
 
 
