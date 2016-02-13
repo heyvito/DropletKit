@@ -13,7 +13,7 @@
 
 #pragma mark Life cycle
 - (void)fillInstanceWithDictionary:(NSDictionary *)data {
-    if(data != nil || ![data isEqual:[NSNull null]]) {
+    if(data != nil) {
         if([[data allKeys] containsObject:@"kernel"]) {
             data = [data objectForKey:@"kernel"];
         }
