@@ -26,8 +26,12 @@
         EXPAND_DATA_DATE_LOCAL(created_at, createdAt)
         
         self.locked = [[data objectForKey:@"locked"] boolValue];
-        self.kernel = [[DKKernel alloc] initWithDictionary:data[@"kernel"]];
         self.isKernelManagedInternally = data[@"kernel"] == nil;
+        if(self.isKernelManagedInternally) {
+            self.kernel = nil;
+        } else {
+            self.kernel = [[DKKernel alloc] initWithDictionary:data[@"kernel"]];
+        }
         self.image = [[DKImage alloc] initWithDictionary:data[@"image"]];
         self.size = [[DKSize alloc] initWithDictionary:data[@"size"]];
         self.region = [[DKRegion alloc] initWithDictionary:data[@"region"]];
