@@ -306,7 +306,7 @@
 
 - (PMKPromise *)createDropletWithName:(NSString *)name image:(DKImage *)image andSize:(DKSize *)size onRegion:(DKRegion *)region withSSHKeys:(NSArray *)keys enableBackups:(BOOL)backups enableIPv6:(BOOL)ipv6 enablePrivateNetworking:(BOOL)enablePrivNet {
     NSString *url = [self apiURLForEndpoint:@"droplets"];
-    NSDictionary *data = @{
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:@{
         @"name": name,
         @"image": image.imageId,
         @"region": region.slug,
@@ -314,7 +314,7 @@
         @"backups": @(backups),
         @"ipv6": @(ipv6),
         @"private_networking": @(enablePrivNet)
-        };
+        }];
     if(keys) {
         NSMutableArray *result = [[NSMutableArray alloc] init];
         for(id i in keys) {
