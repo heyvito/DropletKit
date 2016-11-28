@@ -51,7 +51,7 @@
         self.totalObjects = meta[@"total"];
         if([[links allKeys] containsObject:@"pages"] && [[links[@"pages"] allKeys] containsObject:@"next"]) {
             self.hasNextPage = YES;
-            nextPage = links[@"pages"][@"next"];
+            nextPage = [links[@"pages"][@"next"] stringByReplacingOccurrencesOfString:@"http:" withString:@"https:"];
         }
         self.objects = [self processJSONArray:data[[self expectedArrayKey]]];
     }
